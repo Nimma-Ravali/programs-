@@ -1,0 +1,283 @@
+* Difference between Checked Exception and Unchecked Exception :
+----------------------------------------------------------------
+Checked Exception :
+----------------------
+In java some exceptions are very common exceptions are called Checked excption here compiler takes very much care and wanted the clarity regarding the exception by saying that, by using this code you may face some problem at runtime and you did not report me how would you handle this situation at runtime are called Checked exception, so provide either try-catch or declare the method as throws.
+
+All the checked exceptions are directly sub class of java.lang.Exception
+
+Eg:
+---
+FileNotFoundException, IOException, InterruptedException,ClassNotFoundException, SQLException and so on
+
+Unchecked Exception :-
+--------------------------
+The exceptions which are rarely occurred in java and for these kinds of exception compiler does not take any care are called unchecked exception.
+
+Unchecked exceptions are directly entertain by JVM because they are rarely occurred in java.
+
+All the un-checked exceptions are sub class of RuntimeException
+
+Eg:
+---
+ArithmeticException, ArrayIndexOutOfBoundsException, NullPointerException, NumberFormatException, ClassCastException, ArrayStoreException and so on.
+-------------------------------------------------------------------------
+Checked Exception :
+------------------
+  1) Common Exception
+  2) Compiler takes care (Will not compile the code)
+  3) Handling is compulsory (try-catch OR throws)
+  4) Directly the sub class of java.lang.Exception
+
+Unchecked Exception :
+----------------------
+  1) Rare Exception
+  2) Comiler will not take any care
+  3) Handling is not Compulsory
+  4) Sub class of RuntimeException
+--------------------------------------------------------------------------
+When to provide try-catch or declare the method as throws :-
+---------------------------------------------------------------------
+We should provide try-catch if we want to handle the exception by own as well as if we want to provide user-defined messages to the client but on the other hand we should declare the method as throws when we are not interested to handle the exception and try to send it to the JVM for handling purpose. 
+
+Note :- It is always better to use try catch so we can provide appropriate user defined messages to our client.
+-------------------------------------------------------------------------
+*Why compiler takes very much care regarding the checked Exception ?
+---------------------------------------------------------------------
+As we know Checked Exceptions are very common exception so in case of checked exception "handling is compulsory" because checked Exception depends upon other resources as shown below.
+
+IOException  (we are depending upon System Keyboard OR Files )
+FileNotFoundException(We are depending upon the file)
+InterruptedException (Thread related problem)
+ClassNotFoundException (class related problem)
+SQLException (SQL related or database related problem)
+---------------------------------------------------------------------------
+* What is the difference between throw and throws :
+----------------------------------------------------
+throw :
+--------
+In case of predefined exception, try block is responsible to create the exception object and throw the exception object to the nearest catch block but it works with predefined exception only.
+
+If a user wants to throw an exception based on his own requirement and specification by using userdefined exception then we should write throw keyword to throw the user defined exception object explicitly. (throw new LowBalanceException())
+
+THROWING THE EXCEPTION OBJCET EXPLICITLY.
+
+throws :- 
+---------
+In case of checked Exception if a user is not interested to handle the exception and wants  to throw the exception to JVM, wants to skip from the current situation then we should declare the method as throws.
+It is mainly used to work with Checked Exception
+--------------------------------------------------------------------------
+
+Types of exception in java :
+-------------------------------
+Exception can be divided into two types :
+
+1) Predefined Exception OR Built-in Exception
+
+2) Userdefined Exception OR Custom Exception
+
+Predefined Exception :-     
+-------------------------
+The Exceptions which are already defined by Java software people for some specific purposes are called predefined Exception or Built-in exception.
+Ex :
+----
+IOException, ArithmeticException and so on
+
+Userdefined Exception :-
+---------------------------
+The exceptions which are defined by user according to their own use and requirement are called User-defined Exception.
+
+Ex:-
+----
+InvalidAgeException, GreaterMarksException
+----------------------------------------------------------------------
+30-01-2024
+-----------
+Steps to create userdefined exception :
+------------------------------------------
+In order to create user defined exception we should follow the following steps.
+
+1) A userdefined exception class must extends either Exception(Checked Exception) Or RuntimeException(Unchecked Exception) as a super class.
+
+    a) If our userdefined class extends RuntimeException that menas we are creating UncheckedException.
+
+    b) If our userdefined class extends Exception that menas we are creating checkedException and exception handling is compulsory here.
+
+2) The user-defined class must contain No argument constructor as well as parameterized construtor(in case we want to pass some userdefined message).
+
+   We should take No argument constructor if we don't want to send any message where as we should take parameterized constructor with super keyword if we want to send the message to the super class.
+
+3) We should use throw keyword to throw the Exception object explicitly.
+---------------------------------------------------------------------
+Program on Checked Exception that describes user is eligible for 
+Voting app or not ?
+
+Some important rules to follow :
+---------------------------------
+a) If the try block does not throw any checked exception then in the corresponding catch block we can't handle checked exception.It will generate compilation error i.e "exception never thrown from the corresponding try statement"
+
+a.1)If the try block does not throw any uncheched exception then in the corresponding catch block we can handle unchecked exception.
+----------------------------------------------------------------------
+b) If the try block does not throw any exception then in the corresponding catch block we can write Exception, Throwable because both are the super classes for all types of Exception whether it is checked or unchecked.
+----------------------------------------------------------------------
+If the try block  throw any checked exception then in the corresponding catch block we can write Exception, Throwable  and specific exception thrown in try block.
+---------------------------------------------------------------------------------------------------------------------------------------------
+ If the try block  throw any unchecked exception then in the corresponding catch block we can write Exception, Throwable  and any unchecked  exception .
+---------------------------------------------------------------------------------------------------------------------------
+c) At the time of method overriding if the super class method does 
+   not reporting or throwing checked exception then the overridden method of sub class not allowed to throw checked exception. otherwise it will generate compilation error.(Sub class method can throws un-checked Exception)
+c.1)At the time of method overriding if the super class method does 
+   not reporting or throwing unchecked exception then the overridden method of sub class  allowed to throw unchecked exception. 
+-----------------------------------------------------------------------------------
+d) If the super class method declare with throws keyword to throw a checked exception, then at the time of method overriding, sub class method may or may not use throws keyword.
+               If the Overridden method is also using throws
+ keyword to throw checked exception then it must be either same exception class or sub class, it should not be super class as well as we can't add more exceptions in the overridden method.
+d.1)If the super class method declare with throws keyword to throw a unchecked exception, then at the time of method overriding, sub class method may or may not use throws keyword.
+               If the Overridden method is also using throws
+ keyword to throw unchecked exception then it can be any unchecked Exception.
+--------------------------------------------------------------------------------------------------
+
+Exception propagation :-  [Exception object will shift from callee to caller]
+--------------------------
+Whenever we call a method and if the the callee method contains any kind of exception and if callee method doesn't contain any kind of exception handling mechanism (try-catch) then JVM will propagate the exception to caller method for handling purpose. This is called Exception Propagation.
+
+If the caller method also does not contain any exception handling mechanism then JVM will terminate the method from the stack frame hence the remaining part of the method(m1 method) will not be executed even if we handle the exception in another caller method like main.
+
+If any of the the caller method does not contain any exception handling mechanism then exception will be handled by JVM, JVM has default exception handler which will provide the exception message and terminates the program abnormally.
+---------------------------------------------------------------------------------------
+
+Input Output in java :
+-----------------------
+In order to work with input and output concept, java software people has provided a separate package called java.io package.
+
+By using this java.io package we can read the data from the user, creating file, reading/writing the data from the file and so on.
+
+How to take the input from the user using java.io package :
+------------------------------------------------------------
+Scanner class is available from java 1.5 onwards but before 1.5, In order to read the data we were using the following two classes which are available in java.io package.
+
+1) DataInputStream (Deprecated)
+2) BufferedReader
+
+How to create the object for these classes :
+--------------------------------------------
+DataInputStream :
+-----------------
+DataInputStream d = new DataInputStream(System.in);
+
+By using DataInputStream class we can read the data from the user, readLine() method of DataInputStream class is deprecated.
+
+
+BufferedReader :
+----------------
+InputStreamReader isr = new InputStreamReader(System.in);
+BufferedReader br = new BufferedReader(isr);
+                   OR
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+In BufferedReader class, It provides buffer facility so, the execution of the program will be more faster then DataInputStream class.
+
+Methods :
+---------
+1) public int read() : It is used to read a single character only from 
+                       the source and returns the UNICODE value of the character. If the data is not available then it will return -1.
+
+
+2) public String readLine() : It is used to read the complete line or
+                              multiple characters from the source and return type of this method is String.
+
+---------------------------------------------------------------------
+
+-----------
+What is the need of File Handling ?
+-----------------------------------
+ As we know variables are used to store some meaningful value in our program but once the execution of the program is over, now we can't get those values so to hold those values permanently in our memory we use files.
+
+Files are stored in the secondary storage devices so, we can use/read the data stored in the file anytime according to our requirement. 
+
+In order to work with File system java software people has provided number of predefined classes like File, FileInputStream, FileOutputStream and so on. All these classes are available in java.io package. We can read and write the data in the form of Stream.
+--------------------------------------------------------------------
+Streams in java :
+--------------------
+A Stream is nothing but flow of data or flow of characters to both the end.
+Stream is divided into two categories
+
+1) byte oriented Stream :- 
+    ------------------------
+It used to handle characters, images, audio and video file in binary format.  
+
+2) character oriented Stream :-
+--------------------------------
+It is used to handle the data in the form of characters or text.
+
+Now byte oriented or binary Stream can be categorized as "input stream" and "output stream". input streams are used to read or receive the data where as output streams are used to write or send the data.
+
+Again Character oriented Stream is divided into Reader and Writer. Reader is used to read() the data from the file where as Writer is used to write the data to the file.
+
+All Streams are represented by classes in java.io package. 
+
+InputStream is the super class for all kind of input operation where as OutputStream is the super class for all kind of output Operation for byte oriented stream.
+
+Where as Reader is the super class for all kind reading operation where as Writer is the super class for all kind of writing operation in character oriented Stream.
+---------------------------------------------------------------------
+File :-
+-----
+It is a predefined class in java.io package through which we can create file and directory. By using this class we can verify whether the file is existing or not.
+
+File f = new File("abc.txt");
+
+The above statement will not create any file, It actually create the file object and perform one of the following two task.
+   a) If abc.txt does not exist, It will not create it
+   b) if abc.txt does exist, the new file object will be refer to the referenec variable f
+
+Now if the file does not exist and to create the file we should use createNewFile() method as shown below.
+
+File f = new File("Hello.txt");
+      f.createNewFile();
+
+File class has also provided a method called exists() through which we can verify the corresponding file is available or not. The return type of this method is boolean.
+
+Note :- The return type of both the methods i.e exists() and createNewFile() are boolean.
+
+File class has also a predefined method called getName(), to get the name of the file.
+=============================================================================================================
+
+FileOutputStream :
+------------------
+It is a predefined class available in java.io package.
+
+It is used to create a new file every time and after creating the file we can write the data to the file but the data must be available in binary format.
+----------------------------------------------------------------------
+String class has provided a predefined method getBytes() through which we can convert the the String data into byte array (Binary format)
+
+
+FileInputStream :-
+-----------------
+It is a predefined class available in java.io package. It is used to read the file data/content. If we want to print the file data in console then data must be available in char format.
+
+Note :- Whenever we want to write the data in the file then data must 
+        be available in byte format where as If we want to print the data to the console then the data must be converted into char format.String data into byte array (Binary format) as shown
+below.
+---------------------------------------------------------------
+Limitation of FileInputStream class :
+-------------------------------------
+As we know FileInputStream class is used to read the content from the file but it can read the data from a single file only that means if we want to read the data from two files at the same time then we should use a separate Stream called SequenceInputStream.
+
+SequenceInputStream :
+-------------------------
+It is a predefined class available in java.io package. This class is used to read the data from two files at the same time.
+----------------------------------------------------------------------
+//Proram to read the data from two files at the same time
+---------------------------------------------------------------------------------------------------------
+Limitation of FileOutputStream :
+--------------------------------
+By using this FileOutputStream class, we can write the data to single file only.
+If we want to write the data to multiple files at the same time then we should use a separate stream called ByteArrayOutputStream.
+
+ByteArrayOutputStream :-
+---------------------------
+It is a predefined class available in java.io package. By using this class we can write the data to multiple files. ByteArrayOutputStream class provides a method called writeTo(), through which we can write the data to multiple files.
+
+//Program to write the data on multiple files.
+---------------------------------------------------------------------------

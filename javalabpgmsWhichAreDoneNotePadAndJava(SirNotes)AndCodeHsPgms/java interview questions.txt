@@ -1,0 +1,1466 @@
+1) What is Java?
+Java is the high-level, object-oriented, robust, secure programming language, platform-independent, high performance, Multithreaded, and portable programming language. It was developed by James Gosling in June 1991. It can also be known as the platform as it provides its own JRE and API.
+======================================================================
+2) What are the differences between C++ and Java?
+anw:see in java see JavaTPoint
+===============================================
+3) List the features of Java Programming language.
+ Java Buzzwords:
+---------------------------------------------------------
+Java is the most popular object-oriented programming language. Java has many advanced features,
+a list of key features is known as Java Buzz Words. The java team has listed the following terms
+as java buzz words.
+• Simple
+• Secure
+• Portable
+• Object-oriented
+• Robust
+• Architecture-neutral (or) Platform Independent
+• Multi-threaded
+• Interpreted
+• High performance
+• Distributed
+• Dynamic
+
+Simple
+--------
+Java programming language is very simple and easy to learn, understand, and code. Most of the
+syntaxes in java follow basic programming language C and object-oriented programming concepts
+are similar to C++. In a java programming language, many complicated features like pointers,
+operator overloading, structures, unions, etc. have been removed. One of the most useful features
+is the garbage collector it makes java more simple.
+
+Secure
+-----------
+Java is said to be more secure programming language because it does not have pointers concept,
+java provides a feature "applet" which can be embedded into a web application. The applet in java
+does not allow access to other parts of the computer, which keeps away from harmful programs
+like viruses and unauthorized access.
+
+Portable
+--------
+Portability is one of the core features of java which enables the java programs to run on any
+computer or operating system. For example, an applet developed using java runs on a wide variety
+of CPUs, operating systems, and browsers connected to the Internet.
+
+Object-oriented
+-----------------
+Java is said to be a pure object-oriented programming language. In java, everything is an object.
+It supports all the features of the object-oriented programming paradigm. The primitive data types
+java also implemented as objects using wrapper classes, but still, it allows primitive data types to
+archive high-performance.
+
+Robust
+-----------
+Java is more robust because the java code can be executed on a variety of environments, java has
+a strong memory management mechanism (garbage collector), java is a strictly typed language, it
+has a strong set of exception handling mechanism, and many more.
+
+Architecture-neutral (or) Platform Independent
+-------------------------------------------------
+Java has invented to archive "write once; run anywhere, any time, forever". The java provides
+JVM (Java Virtual Machine) to to archive architectural-neutral or platform-independent. The JVM
+allows the java program created using one operating system can be executed on any other
+operating system.
+
+Multi-threaded
+-----------------
+Java supports multi-threading programming, which allows us to write programs that do multiple
+operations simultaneously.
+
+Compiled and Interpreted:
+------------------------- 
+Basically a computer language
+is either compiled or interpreted. Java comes together both
+these approach thus making Java a two-stage system.Java
+compiler translates Java code to Bytecode instructions and
+Java Interpreter generate machine code that can be directly
+executed by machine that is running the Java program.
+
+High performance
+----------------
+Java provides high performance with the help of features like JVM, interpretation, and its
+simplicity
+
+Distributed
+----------------
+Java programming language supports TCP/IP protocols which enable the java to support the
+distributed environment of the Internet. Java also supports Remote Method Invocation (RMI), this
+feature enables a program to invoke methods across a network.
+
+Dynamic
+---------
+Java is said to be dynamic because the java byte code may be dynamically updated on a running
+system and it has a dynamic memory allocation and deallocation (objects and garbage collector).
+=====================================================================================
+4)JDK,JRE,JVM?
+
+JVM: JVM also known as Java Virtual Machine is a part of JRE. JVM is a type of interpreter responsible for converting bytecode into machine-readable code. JVM itself is platform dependent but it interprets the bytecode which is the platform-independent reason why Java is platform-independent. 
+JVM (Java Virtual Machine) is a very important part of both JDK and JRE because it is contained or inbuilt in both. Whatever Java program you run using JRE or JDK goes into JVM and JVM is responsible for executing the java program line by line, hence it is also known as an interpreter.
+-----------------------------------------------------
+JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or application on any machine.JRE is only used by those who only want to run Java programs that are end-users of your system.It is the implementation of JVM.
+It physically exists. It contains set of libraries + other files that JVM uses at runtime. Implementation of JVMs are also actively released by other companies besides Sun Micro Systems.
+--------------------------------------------
+JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.
+JDK (Java Development Kit) is a Kit that provides the environment to develop and execute(run) the Java program. JDK is a kit(or package) that includes two things
+Development Tools(to provide an environment to develop your java programs)
+JRE (to execute your java program).
+===============================================
+5)Draw the JDK diagram?
+(in book)
+======================================
+6)what are the data types?
+
+Data types are divided into two groups:
+Primitive data types - includes byte, short, int, long, float, double, boolean and char
+Non-primitive data types - such as String, Arrays and Classes etc.
+
+Primitive Data Types
+-------------------
+A primitive data type specifies the size and type of variable values, and it has no additional methods.
+There are eight primitive data types in Java:
+table(in book)
+type of data types(in tree structure)
+
+Numbers
+--------
+Primitive number types are divided into two groups:
+
+Integer types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, int and long. Which type you should use, depends on the numeric value.
+
+Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double.
+
+Even though there are many numeric types in Java, the most used for numbers are int (for whole numbers) and double (for floating point numbers).
+
+Integer Types
+------------
+Byte
+----
+The byte data type can store whole numbers from -128 to 127. This can be used instead of int or other integer types to save memory when you are certain that the value will be within -128 and 127
+Syntax: 
+byte byteVar;
+Size: 1 byte (8 bits)
+
+Short
+-----
+The short data type can store whole numbers from -32768 to 32767
+Syntax: 
+short shortVar;
+Size: 2 bytes (16 bits)
+
+Int
+---
+The int data type can store whole numbers from -2147483648 to 2147483647. In general, and in our tutorial, the int data type is the preferred data type when we create variables with a numeric value.
+Syntax: 
+int intVar;
+Size: 4 bytes ( 32 bits )
+
+Long
+----
+The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when int is not large enough to store the value. Note that you should end the value with an "L"
+Syntax: 
+long longVar;
+Size:8 bytes (64 bits).
+
+Floating Point Types
+-------------------
+You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.
+The float and double data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles
+Syntax: 
+float floatVar;
+
+Use float or double?
+
+The precision of a floating point value indicates how many digits the value can have after the decimal point. The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. Therefore it is safer to use double for most calculations.
+
+Scientific Numbers
+-----------------
+A floating point number can also be a scientific number with an "e" to indicate the power of 10:
+
+pgm:
+---
+public class Main {
+  public static void main(String[] args) {
+    float f1 = 35e3f;
+    double d1 = 12E4d;
+    System.out.println(f1);
+    System.out.println(d1);  
+  }
+}
+o/p:
+35000.0
+120000.0
+--------------------------------
+Boolean Types
+Very often in programming, you will need a data type that can only have one of two values, like:
+
+YES / NO
+ON / OFF
+TRUE / FALSE
+For this, Java has a boolean data type, which can only take the values true or false
+Boolean values are mostly used for conditional testing.
+
+Characters
+-----------
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c'
+
+Strings
+-------
+The String data type is used to store a sequence of characters (text). String values must be surrounded by double quotes
+
+Non-Primitive Data Types
+-----------------------
+Non-primitive data types are called reference types because they refer to objects.
+
+The main difference between primitive and non-primitive data types are:
+
+Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).
+Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+A primitive type has always a value, while non-primitive types can be null.
+A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+Examples of non-primitive types are Strings, Arrays, Classes,Object, Interface, etc.
+======================================================================
+7)Why is the Size of char 2 bytes in Java?
+ 
+So, other languages like C/C++ use only ASCII characters, and to represent all ASCII characters 8 bits is enough. But Java uses the Unicode system not the ASCII code System and to represent the Unicode system 8 bits is not enough to represent all characters so Java uses 2 bytes for characters. Unicode defines a fully international character set that can represent most of the world’s written languages. It is a unification of dozens of character sets, such as Latin, Greek, Cyrillic, Katakana, Arabic, and many more.
+=======================================================================
+8)Ascending order of numeric data types?
+
+boolean-1 bit
+byte-1 byte
+char-2 byte
+short 2 bytes size
+int-4 bytes size
+float-4 bytes size
+long-8 bytes size
+double-8 bytes size
+==============================================
+9)What is type casting?
+In Book
+============================
+10. What is JVM architecture?
+JVM (Java Virtual Machine) Architecture
+------------------------------------------
+JVM (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed.
+
+JVMs are available for many hardware and software platforms (i.e. JVM is platform dependent).
+
+What is JVM
+It is:
+
+A specification where working of Java Virtual Machine is specified. But implementation provider is independent to choose the algorithm. Its implementation has been provided by Oracle and other companies.
+An implementation Its implementation is known as JRE (Java Runtime Environment).
+Runtime Instance Whenever you write java command on the command prompt to run the java class, an instance of JVM is created.
+Class loader sub system with JVM Architecture :
+------------------------------------------------------
+The three main components of JVM 
+
+1) class loader sub system
+
+2) Runtime Data Areas
+
+3) Execution engine
+[how many class loaders we have (3)]
+class loader sub system internally performs 3 task
+-------------------------------------------------
+a) Loading     b) Linking      c) Initialization   (Diagram 9th JAN)
+
+Loading:
+----------
+In order to load the required .class file, JVM makes a request to class loader sub system. The class loader sub system follows delegation hierarchy algorithm to load the required .class files from different areas.
+
+To load the required .class file we have 3 different kinds of class loaders.
+
+1) Bootstrap/Primordial class loader
+
+2) Extension/Platform class loader
+
+3) Application/System class loader
+
+Bootstrap/Primordial class Loader :-
+---------------------------------
+It is responsible to load the required .class file from java API that means all the predfined classes (provided by java software people) .class file will be loaded by Bootstrap class loader.
+It is the super class of Extension class loader as well as It has the highest priority among all the class loader.
+
+Extension/Platform  class  Loader :-
+--------------------------------------
+It is responsible to load the required .class files from ext (extension) folder. Inside the extension folder we have  jar file(Java level zip file) given by some third party or user defined jar file.
+It is the super class of Application class loader as well as It has more priority than Application class loader.
+
+
+Note :- Command to create the jar file 
+
+           jar cf NIT.jar  FileName.class
+
+Here FileName.class will be placed inside the jar file.
+
+Application/System class Loader :-
+--------------------------------------
+It is responsible to load the required .class file from class path level i.e Environment variable. It has lowest priority as well as It is the sub class of Extension/Platform class loader.
+
+Note :- 
+------
+If all the class loaders are failed to load the .class file into JVM memory then we will get a Runtime exception i.e java.lang.ClassNotFoundException.
+---------------------------------------------------------------
+Linking :performs verification,preparation and resolve
+---------
+verify :-
+-------
+It ensures the correctness of the .class files, If any suspicious activity is there in the .class file then It will stop the execution immediately by throwing an exception i.e java.lang.VerifyError.
+
+There is something called ByteCodeVerifier(Component of JVM), responsible to verify the loaded .class file i.e byte code. Due to this verify module JAVA is highly secure language. 
+
+java.lang.VerifyError is the sub class of java.lang.linkageError
+---------------------------------------------------------------------
+prepare: (static variable memory allocation + Initialization )
+--------
+It will allocate the memory for all the static data members, here all the static data member will get the default values so if we have 
+static int x = 100;
+
+then for variable x  memory will be allocated and now it will initialize with default value i.e 0.
+-----------------------------------------------------------------------
+Resolve :-
+-----------
+All the symbolic references will be converted to direct references or actual reference.
+
+javap -verbose  FileName.class
+
+Note :- By using above command we can read the internal details of .class file.
+----------------------------------------------------------------------
+Initialization :-
+-----------------
+In Initialization, all the static data member will get their actual (Original) value as well as if any static block is present in the class then the static block will start executing from here
+Runtime Data Areas :
+--------------------
+a) Method Area :
+-------------------
+In this area all class level information is available. Actually the .class file is dumpped here hence we have all kinds of information related to class is available like name of the class, name of the immediate super class, package name, method name , variable name, static variable, all method available in that particular class and so on.
+
+This method area returns type java.lang.Class class , this java.lang.Class class object can hold any .class file 
+(Class c = AnyClass.class)
+
+There is only one method area per JVM.
+--------------------------------------------------------------------------
+The following program explains how to get the complete information regarding the class.
+b) HEAP memory :-
+--------------------
+It stores information regarding object and instance variables. All the objects are created as a part of HEAP memory so automatically all the instance variables are also the part of HEAP memory.
+
+There is only one HEAP area per JVM.
+-------------------------------------------------------------------
+c) Stack Area 
+--------------
+All the methods are executed as a part of Stack Area.
+We can have multiple Stack area per JVM.
+Whenever we call a method then one STACK FRAME will be created, this Stack Frame is responsible to hold local variable and parameter variable.
+Once method execution is over then Stack frame will be deleted from the Stack.
+Stacke Frame contains 3 parts 
+                   a) Local Variable
+                   b) Frame Data 
+                   c) Operand Stack
+d)PC Register :-
+--------------
+The Java Virtual Machine can support many threads of execution at once . Each Java Virtual Machine thread has its own pc (program counter) register.
+
+In order to hold the current executing instruction of a thread we use PC register. For a single JVM we can have multiple PC Registers ecah PC register  refers to a particular thread.
+e)Native method stack :-
+--------------------------
+For every thread in java a seperate native stack is created. It stores the native method information.
+
+native code means the code written in native languages like C, C++ .
+In order to convert java into native code language we need native method libraries
+-------------------------------------------------------------------------
+Execution Engine 
+
+Execution engine executes the “.class” (bytecode). It reads the byte-code line by line, uses data and information present in various memory area and executes instructions.
+ It can be classified into three parts:
+i)garbage collector
+ii)interpreter
+iii)just in time compiler
+Garbage Collector :-
+----------------------
+In older languages like C++, It is the responsibility of the programmer to allocate the memory as well as to de-allocate the memory otherwise there may be chance of getting OutOfMemoryError
+
+But in Java a user is not responsible to de-allocate the memory that means memory allocation is the responsibility of user but  memory de-allocation is automatically done by Garbage Collector.
+
+Garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not in use, and deleting the unused objects (The object which does not contain any references).
+
+It is an automatic memory management in java. JVM internally contains a thread called Garbage collector which is daemon thread, It is responsible to delete the unused objects or the objects which are not containing any references in the heap memory.
+
+Note :- GC uses an algorithm mark and sweep to make an un-used objects eligible for Garbage Collection.
+
+The garbage Collector thread is visiting our program at regular interval to delete the unused objects but as a programmer we can call garbge collector explicitly to visit our program by using the following code.
+
+System.gc(); //explicitly calling the garbage collector
+
+gc() is a predefined static method of System class.
+
+------------------------------------------------------------------------
+-------------------------------------------------------------------
+Interpreter :- 
+---------------
+JVM stands for Java Virtual Machine. It is a software in the form of Interpreter written in 'C' language. 
+
+The main purpose of JVM to load and execute the .class file.JVM has a component called class loader subsystem responsible to load the required .class file as well as It allocates the necessary memory needed by the java program.
+
+JVM executes our program line by line. It is slow in nature (Execution is slow) so java software people has provided a special compiler i.e JIT compiler to boost up the execution.
+------------------------------------------------------------------------
+JIT compiler :-
+-----------------
+It stands for just in time compiler. It is the part of JVM which boost the speed of execution of a java program(boost up the execution).
+
+It holds the frequently used instruction  or repeated method instruction and make it available to the JVM at the time of executing java program directly so the execution will become faster.
+Java Native Interface (JNI) : 
+
+It is an interface that interacts with the Native Method Libraries and provides the native libraries(C, C++) required for the execution. It enables JVM to call C/C++ libraries and to be called by C/C++ libraries which may be specific to hardware.
+
+Native Method Libraries : 
+
+It is a collection of the Native Libraries(C, C++) which are required by the Execution Engine.
+============================================
+8. How many class loaders we have ?
+=========================================
+9. How many . dot extensions will create after executing the one code?
+==================================================
+10. Can I take multi classes in single java file?
+========================================
+11. How many token we have ?
+
+Token :
+--------
+A token is the smallest unit of the program that is identified by the compiler.
+
+Every Java statements and expressions are created using tokens.
+
+A token can be divided into 5 types 
+
+1) Keywords
+2) Identifiers
+3) Literals
+4) Punctuators
+5) Operators
+
+Keyword :- 
+----------
+A keyword is a predefined word whose meaning is already defined by the compiler.
+
+In java all the keywords must be in lowercase only.
+
+A keyword we can't use as a name of the variable, name of the class or name of the method.
+
+true, false and null look like keywords but actually they are literals.
+
+
+Identifiers :
+--------------
+A name in java program  by default considered as identifiers.
+
+Assigned to variable, method, classes to uniquely identify them.
+
+We can't use keyword as an identifier.
+
+Rules for defining an identifier :
+------------------------------------
+1) Can consist of uppercase(A-Z), lowercase(a-z),  digits(0-9), $ sign, and   underscore (_)
+2) Begins with letter, $, and _
+3) It is case sensitive
+4) Cannot be a keyword
+5) No limitation of length 
+-----------------------------------------------------------------------
+Literals :-
+-----------
+Assigning some constant value to variable is called Literal.
+
+Java supports 5 types of Literals :
+
+1) Integral Literal  Ex:-  int x = 15;
+
+2) Floating Point Literal  Ex:- float x = 3.5f;
+
+3) Character Literal Ex:- char ch = 'A';
+
+4) Boolean Literal Ex:- boolean b = true;
+
+5) String Literal Ex:- String x = "Naresh i Technology";
+
+
+Integral Literal :
+------------------
+If any literal contains number without decimal then it is called 
+intergral literal.
+
+Example :- 89, 90, 56, 67
+
+
+In integral literal we have 4 data types
+a) byte (8 bits)
+b) short (16 bits)
+c) int (32 bits)
+d) long (64 bits)
+
+Decimal Literal :- 
+-------------------
+The base of decimal literal is 10. we can accept any digit from 0-9
+
+Octal Literal :-
+----------------
+The base is 8. Here we can accept digits from 0-7 only. In java if any integral literal prefeix with '0' (Zero) then it becomes octal lietral.
+
+Example:-
+
+int x = 015; //Valid
+int y = 018;//Invalid [Here digit 8 is out of the range]
+
+Hexadecimal Literal :-
+-------------------------
+The base is 16. Here we can accept digits from 0-15 (0-9 and A-F). In java if any integral literal prefix with 0X or 0x (zero with capital X OR zero with small x) then it becomes hexadecimal literal.
+
+Example :-
+
+int x = 0X15; //Valid
+int y = 0x14;//Valid
+int z = 0Xadd; //Valid
+int a = 0Xage; //Invalid ['g' is out of range]
+
+Binary Literal :-
+-----------------
+It is introduced from jdk 1.7 onwards. The base or radix is 2. Here we can accept digits 0 and 1 only. In java if any integral Literal prefix with 0B or 0b (zero capital B or 0 small b) then it becomes binary literal.
+
+Example :-
+
+int x = 0B111; //Valid
+int y = 0b101010; //Valid
+int z = 0B12; //Invalid [digit 2 is out of range]
+
+
+Integral Literals:-
+How to know the minimum and maximum value as well as size of integral literal data types:
+----------------------------------------------------------------
+Thses classes (Wrapper classe) are providing the static and final variables through which we can find out the minimum, maximum value as well as size of the data types
+
+Ex:- I want to find out the range and size of Byte class
+
+Byte.MIN_VALUE = -128
+
+Byte.MAX_VALUE = 127
+
+Byte.SIZE = 8 (in bits format)
+
+Here MIN_VALUE, MAX_VALUE and SIZE these are static and final variables available in these classes(Byte, Short, Integer and Long).
+
+
+
+2) Floating point Literal :
+---------------------------
+If any numeric literal contains fraction or decimal then it is called 
+floating point literal.
+
+Example :- 12.1, 78.56, 34.89
+
+In floating point literal we have 2 data types
+   a) float (32 bits)
+   b) double (64 bits)
+
+
+In floating point literal by default every floating point literal is of 
+type double only so, the following statement will generate compilation error.
+              float f1 = 23.89; //error
+
+Here we can have 3 solutions.
+
+           float f1 = (float) 0.1; //Valid
+	   float f2 = 89.90f;      //Valid
+	   float f3 = 23.67F;      //Valid
+
+
+Even though every floating point literal is of type double but still to represent double value explicitly, compiler has provided two flavors to enhance the readability of the code.
+
+             double d1 = 34.89d;
+	     double d1 = 34.89D;
+
+* While working with integeral literal we had four types of representation decimal, octal, hexadecimal and binary but floating point literal cannot have any different form rather than decimal.
+     
+
+* Integral literal(byte, short, int and long) we can assign to floating point literal(float and double) but floating point literal we cannot assign to integral literal.
+
+A floating point litearl we can represent in exponent form.
+           
+	   double d1 = 15e2; //Exponent form
+
+
+ 3) boolean Literal :
+--------------------
+boolean literal can be represented in two states i.e true or false.
+
+In boolean literal we have only one data type i.e boolean which accepts 1 bit of memory as well as it also depends upon JVM implementation.
+
+                boolean isValid = true;
+		boolean isEmpty = false;
+
+
+Unlike C and C++, In java we cannot assign integral literal to boolean data type.
+
+        boolean isAlive = 0; (Valid in C and C++ but Invalid in Java )
+
+
+We cannot assign String literal value to boolean data type.
+
+           boolean isEmpty = "true"; //Invalid
+
+
+4) Character Literal :
+---------------------
+It is also known as char literal.
+
+In char literal we have only one data type i.e char which accepts 
+2 bytes of memory.
+
+In java, We can represent the char literal in different forms which are
+as follows :
+
+   a) Single character enclosed with single quotes.
+      char ch = 'A';     
+
+   b) We can assign integral literal to char data type to represnt UNICODE value. In older languages like C and C++, It supports 
+   ASCII format where the range is 0 - 255. Java supports UNICODE
+   format where the range is 0 - 65535.
+
+      char ch1 = 65535; //Valid
+      char ch1 = 65536; //Invalid
+
+    c) We can assign the character literal to integral literal to get
+       the UNICODE value of that particular character.
+        
+	Example :- int x = 'A';   -> 65
+
+    d) We can assign character literal in 4 digit hexadecimal number
+       to represent the UNICODE value where the format is 
+
+          '\udddd'
+	  Here \u means unicode and d represents it is a digit.
+
+	  The range of 4 digit hexadecimal number is 
+	  '\u0000' to '\uffff'
+     
+     e) We can represent all the escape sequences by using char literal.
+
+
+String Literal :
+----------------
+String is a predefined class available in java.lang package. It is a collection of alpha-numeric characters. We can represent any special symbol by using String literal.
+
+We can String in java by using 3 ways :
+
+1) By Using String Literal :
+   String str1 = "Hello"; //Literal
+
+2) By using new keyword :
+   String str2 = new String("India"); //new keyword
+
+3) By using character array :
+   char [] ch = {'R','A','V','I'};
+
+
+
+1) Arithmetic Operator (Binary Operator)
+2) Unary Operator
+3) Assignment Operator
+4) Relational Operator
+5) Logical Operator
+6) Boolean Operator
+7) Bitwise Operator
+8) Ternary Operator
+9) Dot operator OR Member Access Operator 
+10) new Operator (Keyword)
+11) instanceof operator (Keyword)
+
+Arithmetic Operator :-
+----------------------
+It is also known as Binary Operator because, to work with binary operator we need minimum two operands.
+
+Example :- +, -, *, /  and % 
+
+
+Unary Operator :
+----------------
+The operator which works on single operand.
+
+We have so many unary operators in java. 
+
+1) Unary minus operator (-)  
+2) Increment Operator(++)
+3) Decrement Operator(--)
+
+
+3) Assignment Operator :
+------------------------
+-> It is used to assign the value to an identifier. We use = operator for assignment.
+
+
+
+Relational Operator :- 
+------------------------
+These operators are used to compare the values. The return type is boolean. We have total 6 Ralational Operators.
+
+1) >   (Greater than)
+
+2) <   (Less than)
+
+3) >= (Greater than or equal to)
+
+4) <= (Less than or equal to)
+
+5) == (double equal to)
+
+6) != (Not equal to )
+
+
+Logical Operator :-
+--------------------
+It is used to combine or join the multiple conditions into a single statement. 
+It is also known as short-Circuit logical operator. 
+In Java we have 3 logical Operators 
+
+1) &&  (AND Logical Operator)
+
+2) ||  (OR Logical Operator)
+
+3) !   (NOT Logical Operator)
+
+&&   :- All the conditions must be true. if the first expression is false it will not check right side expressions.
+
+||    :- Among multiple conditions, at least one condition must be true. if the first expression is true it will not check right side expressions. 
+
+! :- It is an inverter, it makes true as a false and false as a true.
+
+Note :- The && and || operator only works with boolean operand so the following code will not compile.
+
+
+Boolean Operators :
+-----------------------
+Boolean Operators work with boolean values that is true and false. It is used to perform boolean logic upon two boolean expressions.
+It is also known as non short circuit. There are two non short circuit logical operators.
+
+&   boolean AND operator  (All  condions must be true but if first expression is false still it will check all right side expression)
+
+|    boolean OR operator    (At least one condition must be true but if the first condition is true still it will check all right side expression )
+
+
+Bitwise Operator :-
+---------------------
+In order to work with binary bits java software people has provided Bitwise operator. It also contains 3 operators
+
+& (Bitwise AND) :- Returns true if both the inputs are true.
+
+|  (Bitwise OR) :- Returns false if both the inputs are false
+ 
+^ (Bitwise X-OR) :- Returns true if both the arguments are opposite to each other.
+
+
+8) Ternary Operator
+
+Ternary Operator OR Conditional Operator :
+--------------------------------------------------
+The ternary operator (? :) consists of three operands. It is used to evaluate boolean expressions. The operator decides which value will be assigned to the variable.It is used to reduced the size of if-else condition. 
+
+Member access Operator Or Dot Operator :
+--------------------------------------------------
+It is used to access the member of the class so whenever we want to invoke(call) the member of the class (fields + methods) then we should use dot(.) operator.
+
+Some important points :
+-----------------------
+a) From our main method (static method) we can't call non-static member i.e non-static variable and non-static method, Here Object is required otherwise we will get error as shown in the program below
+
+
+new Operator
+-------------
+This Operator is used to create Object. If the member of the class (field + method) is static, object is not required. we can directly call with the help of class name.
+
+On the other hand if the member of the class (variables + method) is not declared as static then it is called non-static member Or instance member , to call the non-static member object is required.
+
+
+instanceof operator :
+---------------------
+
+1)This Operator will return true/false
+
+2) It is used to check whether a reference variable is holding the particular/corresponding type of Object or not.   
+
+3) It is also a keyword.
+
+4) In between the object reference and class name , we must have some kind of relation (assignment relation) otherwise we will get compilation error.
+========================================================================
+12. What are access modifiers we have?
+
+There are two types of modifiers in Java: access modifiers and non-access modifiers.
+
+The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class. We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.
+
+There are four types of Java access modifiers:
+
+Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+------
+Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+--------
+Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from 
+---------
+outside the package.
+
+Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
+There are many non-access modifiers, such as static, abstract, synchronized, native, volatile, transient, etc. Here, we are going to learn the access modifiers only.
+
+=======================================================
+14. Explain class structure?(state and behavior of PEN class)
+
+What is a class?
+----------------
+A class is a model/blueprint/template/prototype for creating an object.
+
+A class is a user-defined data type which contains data member and member function.
+
+Example :
+
+public class Student
+{
+   student data (Properties)
+
+         +
+   Student behavior (Function)
+}
+
+A class is logical entity which does not take any space.
+
+A CLASS IS A COMPONENT WHICH IS USED TO DEFINE OBJECT PROPERTIES AND 
+OBJECT BEHAVIOR.
+
+===============================================
+15. Description of main method.
+
+main() :-
+----------
+It is a user-defined method because a user is responsible to define some logic inside the main method.
+
+main() method is very important method because every program execution will start from main() method only, as well as the execution of the program ends with main() method only.
+
+We can write multiple main methods in our class but argument must be different. JVM will always search the main method which takes String array as a parameter
+
+==================================
+16. How many access modifiers tokens we have?
+====================================================
+
+JVM (Java Virtual Machine) Architecture
+------------------------------------------
+JVM (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed.
+
+JVMs are available for many hardware and software platforms (i.e. JVM is platform dependent).
+
+What is JVM
+It is:
+
+A specification where working of Java Virtual Machine is specified. But implementation provider is independent to choose the algorithm. Its implementation has been provided by Oracle and other companies.
+An implementation Its implementation is known as JRE (Java Runtime Environment).
+Runtime Instance Whenever you write java command on the command prompt to run the java class, an instance of JVM is created.
+Class loader sub system with JVM Architecture :
+------------------------------------------------------
+The three main components of JVM 
+
+1) class loader sub system
+
+2) Runtime Data Areas
+
+3) Execution engine
+[how many class loaders we have (3)]
+class loader sub system internally performs 3 task
+-------------------------------------------------
+a) Loading     b) Linking      c) Initialization   (Diagram 9th JAN)
+
+Loading:
+----------
+In order to load the required .class file, JVM makes a request to class loader sub system. The class loader sub system follows delegation hierarchy algorithm to load the required .class files from different areas.
+
+To load the required .class file we have 3 different kinds of class loaders.
+
+1) Bootstrap/Primordial class loader
+
+2) Extension/Platform class loader
+
+3) Application/System class loader
+
+Bootstrap/Primordial class Loader :-
+---------------------------------
+It is responsible to load the required .class file from java API that means all the predfined classes (provided by java software people) .class file will be loaded by Bootstrap class loader.
+It is the super class of Extension class loader as well as It has the highest priority among all the class loader.
+
+Extension/Platform  class  Loader :-
+--------------------------------------
+It is responsible to load the required .class files from ext (extension) folder. Inside the extension folder we have  jar file(Java level zip file) given by some third party or user defined jar file.
+It is the super class of Application class loader as well as It has more priority than Application class loader.
+
+
+Note :- Command to create the jar file 
+
+           jar cf NIT.jar  FileName.class
+
+Here FileName.class will be placed inside the jar file.
+
+Application/System class Loader :-
+--------------------------------------
+It is responsible to load the required .class file from class path level i.e Environment variable. It has lowest priority as well as It is the sub class of Extension/Platform class loader.
+
+Note :- 
+------
+If all the class loaders are failed to load the .class file into JVM memory then we will get a Runtime exception i.e java.lang.ClassNotFoundException.
+---------------------------------------------------------------
+Linking :performs verification,preparation and resolve
+---------
+verify :-
+-------
+It ensures the correctness of the .class files, If any suspicious activity is there in the .class file then It will stop the execution immediately by throwing an exception i.e java.lang.VerifyError.
+
+There is something called ByteCodeVerifier(Component of JVM), responsible to verify the loaded .class file i.e byte code. Due to this verify module JAVA is highly secure language. 
+
+java.lang.VerifyError is the sub class of java.lang.linkageError
+---------------------------------------------------------------------
+prepare: (static variable memory allocation + Initialization )
+--------
+It will allocate the memory for all the static data members, here all the static data member will get the default values so if we have 
+static int x = 100;
+
+then for variable x  memory will be allocated and now it will initialize with default value i.e 0.
+-----------------------------------------------------------------------
+Resolve :-
+-----------
+All the symbolic references will be converted to direct references or actual reference.
+
+javap -verbose  FileName.class
+
+Note :- By using above command we can read the internal details of .class file.
+----------------------------------------------------------------------
+Initialization :-
+-----------------
+In Initialization, all the static data member will get their actual (Original) value as well as if any static block is present in the class then the static block will start executing from here
+Runtime Data Areas :
+--------------------
+a) Method Area :
+-------------------
+In this area all class level information is available. Actually the .class file is dumpped here hence we have all kinds of information related to class is available like name of the class, name of the immediate super class, package name, method name , variable name, static variable, all method available in that particular class and so on.
+
+This method area returns type java.lang.Class class , this java.lang.Class class object can hold any .class file 
+(Class c = AnyClass.class)
+
+There is only one method area per JVM.
+--------------------------------------------------------------------------
+The following program explains how to get the complete information regarding the class.
+b) HEAP memory :-
+--------------------
+It stores information regarding object and instance variables. All the objects are created as a part of HEAP memory so automatically all the instance variables are also the part of HEAP memory.
+
+There is only one HEAP area per JVM.
+-------------------------------------------------------------------
+c) Stack Area 
+--------------
+All the methods are executed as a part of Stack Area.
+We can have multiple Stack area per JVM.
+Whenever we call a method then one STACK FRAME will be created, this Stack Frame is responsible to hold local variable and parameter variable.
+Once method execution is over then Stack frame will be deleted from the Stack.
+Stacke Frame contains 3 parts 
+                   a) Local Variable
+                   b) Frame Data 
+                   c) Operand Stack
+d)PC Register :-
+--------------
+The Java Virtual Machine can support many threads of execution at once . Each Java Virtual Machine thread has its own pc (program counter) register.
+
+In order to hold the current executing instruction of a thread we use PC register. For a single JVM we can have multiple PC Registers ecah PC register  refers to a particular thread.
+e)Native method stack :-
+--------------------------
+For every thread in java a seperate native stack is created. It stores the native method information.
+
+native code means the code written in native languages like C, C++ .
+In order to convert java into native code language we need native method libraries
+-------------------------------------------------------------------------
+Execution Engine 
+
+Execution engine executes the “.class” (bytecode). It reads the byte-code line by line, uses data and information present in various memory area and executes instructions.
+ It can be classified into three parts:
+i)garbage collector
+ii)interpreter
+iii)just in time compiler
+Garbage Collector :-
+----------------------
+In older languages like C++, It is the responsibility of the programmer to allocate the memory as well as to de-allocate the memory otherwise there may be chance of getting OutOfMemoryError
+
+But in Java a user is not responsible to de-allocate the memory that means memory allocation is the responsibility of user but  memory de-allocation is automatically done by Garbage Collector.
+
+Garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not in use, and deleting the unused objects (The object which does not contain any references).
+
+It is an automatic memory management in java. JVM internally contains a thread called Garbage collector which is daemon thread, It is responsible to delete the unused objects or the objects which are not containing any references in the heap memory.
+
+Note :- GC uses an algorithm mark and sweep to make an un-used objects eligible for Garbage Collection.
+
+The garbage Collector thread is visiting our program at regular interval to delete the unused objects but as a programmer we can call garbge collector explicitly to visit our program by using the following code.
+
+System.gc(); //explicitly calling the garbage collector
+
+gc() is a predefined static method of System class.
+
+------------------------------------------------------------------------
+-------------------------------------------------------------------
+Interpreter :- 
+---------------
+JVM stands for Java Virtual Machine. It is a software in the form of Interpreter written in 'C' language. 
+
+The main purpose of JVM to load and execute the .class file.JVM has a component called class loader subsystem responsible to load the required .class file as well as It allocates the necessary memory needed by the java program.
+
+JVM executes our program line by line. It is slow in nature (Execution is slow) so java software people has provided a special compiler i.e JIT compiler to boost up the execution.
+------------------------------------------------------------------------
+JIT compiler :-
+-----------------
+It stands for just in time compiler. It is the part of JVM which boost the speed of execution of a java program(boost up the execution).
+
+It holds the frequently used instruction  or repeated method instruction and make it available to the JVM at the time of executing java program directly so the execution will become faster.
+Java Native Interface (JNI) : 
+
+It is an interface that interacts with the Native Method Libraries and provides the native libraries(C, C++) required for the execution. It enables JVM to call C/C++ libraries and to be called by C/C++ libraries which may be specific to hardware.
+
+Native Method Libraries : 
+
+It is a collection of the Native Libraries(C, C++) which are required by the Execution Engine.
+======================================================================================
+Basic Interview Questions :-
+--------------------------
+11. How many token we have ?
+12. What are access modifiers we have?
+13. How many access modifiers tokens we have?
+14. Explain class structure?(state and behavior of PEN class).
+15. Description of main method.
+
+Question no 11)
+
+Token :
+--------
+A token is the smallest unit of the program that is identified by the compiler.
+
+Every Java statements and expressions are created using tokens.
+
+A token can be divided into 5 types 
+
+1) Keywords
+2) Identifiers
+3) Literals
+4) Punctuators
+5) Operators
+
+Keyword :- 
+----------
+A keyword is a predefined word whose meaning is already defined by the compiler.
+
+In java all the keywords must be in lowercase only.
+
+A keyword we can't use as a name of the variable, name of the class or name of the method.
+
+true, false and null look like keywords but actually they are literals.
+
+
+Identifiers :
+--------------
+A name in java program  by default considered as identifiers.
+
+Assigned to variable, method, classes to uniquely identify them.
+
+We can't use keyword as an identifier.
+
+Rules for defining an identifier :
+------------------------------------
+1) Can consist of uppercase(A-Z), lowercase(a-z),  digits(0-9), $ sign, and   underscore (_)
+2) Begins with letter, $, and _
+3) It is case sensitive
+4) Cannot be a keyword
+5) No limitation of length 
+-----------------------------------------------------------------------
+Literals :-
+-----------
+Assigning some constant value to variable is called Literal.
+
+Java supports 5 types of Literals :
+
+1) Integral Literal  Ex:-  int x = 15;
+
+2) Floating Point Literal  Ex:- float x = 3.5f;
+
+3) Character Literal Ex:- char ch = 'A';
+
+4) Boolean Literal Ex:- boolean b = true;
+
+5) String Literal Ex:- String x = "Naresh i Technology";
+
+
+Integral Literal :
+------------------
+If any literal contains number without decimal then it is called 
+intergral literal.
+
+Example :- 89, 90, 56, 67
+
+
+In integral literal we have 4 data types
+a) byte (8 bits)
+b) short (16 bits)
+c) int (32 bits)
+d) long (64 bits)
+
+Decimal Literal :- 
+-------------------
+The base of decimal literal is 10. we can accept any digit from 0-9
+
+Octal Literal :-
+----------------
+The base is 8. Here we can accept digits from 0-7 only. In java if any integral literal prefeix with '0' (Zero) then it becomes octal lietral.
+
+Example:-
+
+int x = 015; //Valid
+int y = 018;//Invalid [Here digit 8 is out of the range]
+
+Hexadecimal Literal :-
+-------------------------
+The base is 16. Here we can accept digits from 0-15 (0-9 and A-F). In java if any integral literal prefix with 0X or 0x (zero with capital X OR zero with small x) then it becomes hexadecimal literal.
+
+Example :-
+
+int x = 0X15; //Valid
+int y = 0x14;//Valid
+int z = 0Xadd; //Valid
+int a = 0Xage; //Invalid ['g' is out of range]
+
+Binary Literal :-
+-----------------
+It is introduced from jdk 1.7 onwards. The base or radix is 2. Here we can accept digits 0 and 1 only. In java if any integral Literal prefix with 0B or 0b (zero capital B or 0 small b) then it becomes binary literal.
+
+Example :-
+
+int x = 0B111; //Valid
+int y = 0b101010; //Valid
+int z = 0B12; //Invalid [digit 2 is out of range]
+
+
+Integral Literals:-
+How to know the minimum and maximum value as well as size of integral literal data types:
+----------------------------------------------------------------
+Thses classes (Wrapper classe) are providing the static and final variables through which we can find out the minimum, maximum value as well as size of the data types
+
+Ex:- I want to find out the range and size of Byte class
+
+Byte.MIN_VALUE = -128
+
+Byte.MAX_VALUE = 127
+
+Byte.SIZE = 8 (in bits format)
+
+Here MIN_VALUE, MAX_VALUE and SIZE these are static and final variables available in these classes(Byte, Short, Integer and Long).
+
+
+
+2) Floating point Literal :
+---------------------------
+If any numeric literal contains fraction or decimal then it is called 
+floating point literal.
+
+Example :- 12.1, 78.56, 34.89
+
+In floating point literal we have 2 data types
+   a) float (32 bits)
+   b) double (64 bits)
+
+
+In floating point literal by default every floating point literal is of 
+type double only so, the following statement will generate compilation error.
+              float f1 = 23.89; //error
+
+Here we can have 3 solutions.
+
+           float f1 = (float) 0.1; //Valid
+	   float f2 = 89.90f;      //Valid
+	   float f3 = 23.67F;      //Valid
+
+
+Even though every floating point literal is of type double but still to represent double value explicitly, compiler has provided two flavors to enhance the readability of the code.
+
+             double d1 = 34.89d;
+	     double d1 = 34.89D;
+
+* While working with integeral literal we had four types of representation decimal, octal, hexadecimal and binary but floating point literal cannot have any different form rather than decimal.
+     
+
+* Integral literal(byte, short, int and long) we can assign to floating point literal(float and double) but floating point literal we cannot assign to integral literal.
+
+A floating point litearl we can represent in exponent form.
+           
+	   double d1 = 15e2; //Exponent form
+
+
+ 3) boolean Literal :
+--------------------
+boolean literal can be represented in two states i.e true or false.
+
+In boolean literal we have only one data type i.e boolean which accepts 1 bit of memory as well as it also depends upon JVM implementation.
+
+                boolean isValid = true;
+		boolean isEmpty = false;
+
+
+Unlike C and C++, In java we cannot assign integral literal to boolean data type.
+
+        boolean isAlive = 0; (Valid in C and C++ but Invalid in Java )
+
+
+We cannot assign String literal value to boolean data type.
+
+           boolean isEmpty = "true"; //Invalid
+
+
+4) Character Literal :
+---------------------
+It is also known as char literal.
+
+In char literal we have only one data type i.e char which accepts 
+2 bytes of memory.
+
+In java, We can represent the char literal in different forms which are
+as follows :
+
+   a) Single character enclosed with single quotes.
+      char ch = 'A';     
+
+   b) We can assign integral literal to char data type to represnt UNICODE value. In older languages like C and C++, It supports 
+   ASCII format where the range is 0 - 255. Java supports UNICODE
+   format where the range is 0 - 65535.
+
+      char ch1 = 65535; //Valid
+      char ch1 = 65536; //Invalid
+
+    c) We can assign the character literal to integral literal to get
+       the UNICODE value of that particular character.
+        
+	Example :- int x = 'A';   -> 65
+
+    d) We can assign character literal in 4 digit hexadecimal number
+       to represent the UNICODE value where the format is 
+
+          '\udddd'
+	  Here \u means unicode and d represents it is a digit.
+
+	  The range of 4 digit hexadecimal number is 
+	  '\u0000' to '\uffff'
+     
+     e) We can represent all the escape sequences by using char literal.
+
+
+String Literal :
+----------------
+String is a predefined class available in java.lang package. It is a collection of alpha-numeric characters. We can represent any special symbol by using String literal.
+
+We can String in java by using 3 ways :
+
+1) By Using String Literal :
+   String str1 = "Hello"; //Literal
+
+2) By using new keyword :
+   String str2 = new String("India"); //new keyword
+
+3) By using character array :
+   char [] ch = {'R','A','V','I'};
+
+
+
+1) Arithmetic Operator (Binary Operator)
+2) Unary Operator
+3) Assignment Operator
+4) Relational Operator
+5) Logical Operator
+6) Boolean Operator
+7) Bitwise Operator
+8) Ternary Operator
+9) Dot operator OR Member Access Operator 
+10) new Operator (Keyword)
+11) instanceof operator (Keyword)
+
+Arithmetic Operator :-
+----------------------
+It is also known as Binary Operator because, to work with binary operator we need minimum two operands.
+
+Example :- +, -, *, /  and % 
+
+
+Unary Operator :
+----------------
+The operator which works on single operand.
+
+We have so many unary operators in java. 
+
+1) Unary minus operator (-)  
+2) Increment Operator(++)
+3) Decrement Operator(--)
+
+
+3) Assignment Operator :
+------------------------
+-> It is used to assign the value to an identifier. We use = operator for assignment.
+
+
+
+Relational Operator :- 
+------------------------
+These operators are used to compare the values. The return type is boolean. We have total 6 Ralational Operators.
+
+1) >   (Greater than)
+
+2) <   (Less than)
+
+3) >= (Greater than or equal to)
+
+4) <= (Less than or equal to)
+
+5) == (double equal to)
+
+6) != (Not equal to )
+
+
+Logical Operator :-
+--------------------
+It is used to combine or join the multiple conditions into a single statement. 
+It is also known as short-Circuit logical operator. 
+In Java we have 3 logical Operators 
+
+1) &&  (AND Logical Operator)
+
+2) ||  (OR Logical Operator)
+
+3) !   (NOT Logical Operator)
+
+&&   :- All the conditions must be true. if the first expression is false it will not check right side expressions.
+
+||    :- Among multiple conditions, at least one condition must be true. if the first expression is true it will not check right side expressions. 
+
+! :- It is an inverter, it makes true as a false and false as a true.
+
+Note :- The && and || operator only works with boolean operand so the following code will not compile.
+
+
+Boolean Operators :
+-----------------------
+Boolean Operators work with boolean values that is true and false. It is used to perform boolean logic upon two boolean expressions.
+It is also known as non short circuit. There are two non short circuit logical operators.
+
+&   boolean AND operator  (All  condions must be true but if first expression is false still it will check all right side expression)
+
+|    boolean OR operator    (At least one condition must be true but if the first condition is true still it will check all right side expression )
+
+
+Bitwise Operator :-
+---------------------
+In order to work with binary bits java software people has provided Bitwise operator. It also contains 3 operators
+
+& (Bitwise AND) :- Returns true if both the inputs are true.
+
+|  (Bitwise OR) :- Returns false if both the inputs are false
+ 
+^ (Bitwise X-OR) :- Returns true if both the arguments are opposite to each other.
+
+
+8) Ternary Operator
+
+Ternary Operator OR Conditional Operator :
+--------------------------------------------------
+The ternary operator (? :) consists of three operands. It is used to evaluate boolean expressions. The operator decides which value will be assigned to the variable.It is used to reduced the size of if-else condition. 
+
+Member access Operator Or Dot Operator :
+--------------------------------------------------
+It is used to access the member of the class so whenever we want to invoke(call) the member of the class (fields + methods) then we should use dot(.) operator.
+
+Some important points :
+-----------------------
+a) From our main method (static method) we can't call non-static member i.e non-static variable and non-static method, Here Object is required otherwise we will get error as shown in the program below
+
+
+new Operator
+-------------
+This Operator is used to create Object. If the member of the class (field + method) is static, object is not required. we can directly call with the help of class name.
+
+On the other hand if the member of the class (variables + method) is not declared as static then it is called non-static member Or instance member , to call the non-static member object is required.
+
+
+instanceof operator :
+---------------------
+
+1)This Operator will return true/false
+
+2) It is used to check whether a reference variable is holding the particular/corresponding type of Object or not.   
+
+3) It is also a keyword.
+
+4) In between the object reference and class name , we must have some kind of relation (assignment relation) otherwise we will get compilation error.
+
+12. What are access modifiers we have?
+
+
+Access Modifiers in Java
+Private access modifier
+Role of private constructor
+Default access modifier
+Protected access modifier
+Public access modifier
+Access Modifier with Method Overriding
+There are two types of modifiers in Java: access modifiers and non-access modifiers.
+
+The access modifiers in Java specifies the accessibility or scope of a field, method, constructor, or class. We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.
+
+There are four types of Java access modifiers:
+
+Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+There are many non-access modifiers, such as static, abstract, synchronized, native, volatile, transient, etc. Here, we are going to learn the access modifiers only.
+
+
+14. Explain class structure?(state and behavior of PEN class)
+
+What is a class?
+----------------
+A class is a model/blueprint/template/prototype for creating an object.
+
+A class is a user-defined data type which contains data member and member function.
+
+Example :
+
+public class Student
+{
+   student data (Properties)
+
+         +
+   Student behavior (Function)
+}
+
+A class is logical entity which does not take any space.
+
+A CLASS IS A COMPONENT WHICH IS USED TO DEFINE OBJECT PROPERTIES AND 
+OBJECT BEHAVIOR.
+
+
+15. Description of main method.
+main() :-
+----------
+It is a user-defined method because a user is responsible to define some logic inside the main method.
+
+main() method is very important method because every program execution will start from main() method only, as well as the execution of the program ends with main() method only.
+
+We can write multiple main methods in our class but argument must be different. JVM will always search the main method which takes String array as a parameter
+===========================================================
+
+
+
+
+
+

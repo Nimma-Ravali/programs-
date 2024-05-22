@@ -1,0 +1,2676 @@
+*********************DAY-1************28/11/23************
+Write a Program on OOPs to define Dog class properties and behaviour.
+properties :
+name  : String
+height : double
+age	: int
+behaviour:
+getDogInformation() : public void
+bark() : public void
+---------------------------------
+public class Dog {
+   // Declare the variables 
+   String dogName;
+   double dogHeight;
+   int dogAge;
+    // Constructor
+    // Method to get dog information
+    public void getDogInformation() {
+      System.out.println("Dog's Name: "+dogName);
+      System.out.println("Dog's Height: "+dogHeight);
+      System.out.println("Dog's Age: "+dogAge);
+    }
+
+    // Method for the dog to bark
+    public void bark() {
+        System.out.print(dogName+"is barking at the Stranger. ");
+        System.out.print("The dog height is "+dogHeight+" cm ");
+        System.out.print("and "+dogAge+" years old.");
+    }
+
+    public static void main(String[] args) {
+        // Create a Dog object
+        Dog pet=new Dog();
+        pet.dogName="Shiroo";
+        pet.dogHeight=11;
+        pet.dogAge=5;
+        // Call methods on the Dog object
+        pet.getDogInformation();
+        System.out.print("-------------------------\n");
+        pet.bark();
+    }
+}
+----------------------------------
+Write a Program on OOPs to define Fan class properties and behaviour.
+properties :
+name  : String
+coil  : String
+wings	: int
+behaviour:
+switchOn() : public void
+switchOff() : public void  write the solution for this Question
+--------------------------------------------------------------------
+ System.out.print("-------------------------\n");
+        pet.bark();
+    }
+}
+
+--------------------------------------------------------------------
+public class Fan {
+   // Declare the variable 
+   String fanName;
+   String fanCoil;
+   int fanWings;
+    // Constructor
+    // Method to switch on the fan
+    public void switchOn() {
+        System.out.println("Brand Name: "+fanName);
+        System.out.println("Coil Name: "+fanCoil);
+        System.out.println("Wings are: "+fanWings);
+        System.out.println("Fan is Start to rotation.");
+    }
+
+    // Method to switch off the fan
+    public void switchOff() {
+        System.out.println("Brand Name: "+fanName);
+        System.out.println("Coil Name: "+fanCoil);
+        System.out.println("Wings are: "+fanWings);
+        System.out.println("Fan is Stop to rotation.");
+    }
+    public static void main(String[] args) {
+        // Create a Fan object
+        Fan fn=new Fan();
+        fn.fanName="Crompto";
+        fn.fanCoil="VFC Coil";
+        fn.fanWings=3;
+        // Call methods on the Fan object
+        fn.switchOn();
+        System.out.println("------------------");
+        fn.switchOff();
+    }
+}
+---------------------------------------------------------
+Write 2 programs on OOPs by your own thinking and imagination.
+
+=======================Day-2==01/12/23===================
+Write a Program on OOPs to define Dog class properties and behaviour.
+properties :
+name  : String
+height : double
+age	: int
+Initialize these properties with the help of Methods not by using Object 
+reference.
+behaviour:
+getDogInformation() : public void
+
+bark() : public void 
+------------------------------------
+public class Dog {
+   // Declare the variables 
+   String dogName;
+   double dogHeight;
+   int dogAge;
+   
+   // Method to initialize dog properties
+    private void initializeProperties(String name, double height, int age) {
+        dogName=name;
+        dogHeight=height;
+        dogAge=age;
+        
+    }
+    
+    // Method to get dog information
+    public void getDogInformation() {
+      System.out.println("Dog's Name: "+dogName);
+      System.out.println("Dog's Height: "+dogHeight);
+      System.out.println("Dog's Age: "+dogAge);
+    }
+
+    // Method for the dog to bark
+    public void bark() {
+        System.out.print(dogName+" is barking at the Stranger. ");
+        System.out.print("The "+dogName+" height is "+dogHeight+" cm ");
+        System.out.print("and "+dogAge+" years old.");
+    }
+public static void main(String[] args) {
+        // Create a Dog object
+        Dog pet=new Dog();
+        pet.initializeProperties("Shiroo", 11, 5);
+        /*pet.dogName="Shiroo";
+        pet.dogHeight=11;
+        pet.dogAge=5;*/
+        // Call methods on the Dog object
+        pet.getDogInformation();
+        System.out.print("-------------------------\n");
+        pet.bark();
+    }
+}  
+-------------------------------------------------
+Write a Program on OOPs to define Fan class properties and behaviour.
+properties :
+name  : String
+coil  : String
+wings	: int
+Initialize these properties with the help of Methods not by using Object 
+reference.
+behaviour:
+switchOn() : public void
+switchOff() : public void 
+-----------------------------------------
+ public class Fan {
+   // Declare the variable 
+   String fanName;
+   String fanCoil;
+   int fanWings;
+    
+    // Method to initialize fan properties
+    private void initializeProperties(String name, String coil, int wings) {
+        fanName=name;
+        fanCoil=coil;
+        fanWings=wings;
+    }
+    
+    // Method to switch on the fan
+    public void switchOn() {
+        System.out.println("Brand Name: "+fanName);
+        System.out.println("Coil Name: "+fanCoil);
+        System.out.println("Wings are: "+fanWings);
+        System.out.println("Fan is Start to rotation.");
+    }
+
+    // Method to switch off the fan
+    public void switchOff() {
+        System.out.println("Brand Name: "+fanName);
+        System.out.println("Coil Name: "+fanCoil);
+        System.out.println("Wings are: "+fanWings);
+        System.out.println("Fan is Stop to rotation.");
+    }
+    public static void main(String[] args) {
+        // Create a Fan object
+        Fan fn=new Fan();
+        fn.initializeProperties("Crompton", "VFC coil", 3);
+        /*fn.fanName="Crompto";
+        fn.fanCoil="VFC Coil";
+        fn.fanWings=3;*/
+        // Call methods on the Fan object
+        fn.switchOn();
+        System.out.println("------------------");
+        fn.switchOff();
+    }
+}
+
+-------------------------------------------------------
+
+Write a Program on OOPs to define Product class properties and behaviour.
+properties :
+productId   : int
+productName  : String
+productPrice  : double
+Initialize these properties with the help of Methods using Scanner class not by using Object reference
+behaviour:
+getProductInfo() : public void
+
+---------------------------------------
+//Import Scanner class here....
+import java.util.*;
+public class Product {
+    private int productId;
+    private String productName;
+    private double productPrice;
+
+    public void initializeProduct() {
+        //intialize the productvalues....
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the productId: ");
+        productId=sc.nextInt();
+        System.out.println("Enter the productName: ");
+        productName=sc.next();
+        System.out.println("Enter the productPrice: ");
+        productPrice=sc.nextDouble();
+        
+    }
+
+    public void getProductInfo() {
+       //Write here the info of the product....
+       System.out.println("Id of Product: "+productId);
+       System.out.println("Name of Product: "+productName);
+       System.out.println("Price of Product: "+productPrice);
+    }
+//}
+
+//public class Main {
+    public static void main(String[] args) {
+       //call method from here....
+       Product pro=new Product();
+       pro.initializeProduct();
+       System.out.println("--------------------------");
+       pro.getProductInfo();
+       System.out.println("------------x-------------");
+    }
+}
+---------------------x------------------------------------
+=======================================================================
+A BLC (Business Logic Class) called Student is given to you.
+
+ Instance Variables:
+ studentId :private-int
+ studentName : private-String
+ marks: private-int
+ grade: private-char
+ method : calculateGrade():public:void
+ Create a method public void setStudentData() with the parameters: studentId, studentName, marks.
+
+ 
+
+ Note that grade is not set through method because it is a calculated value
+ Methods :
+
+ displayDetails(): This method should return a String with the details of the student in the following format:
+
+ Student [name=John Smith, studentId=123, marks=95, grade=A]
+
+ 
+
+ calculateGrade(): This is a public method that calculates the grade based on the marks that is set.
+
+ If marks is above 90, grade is set to A.
+
+ If marks is between 81 and 90, grade is set to B,
+
+ if marks is between 71 and 80, grade is set to C,
+
+ if marks is between 61 and 70, grade is set to D,
+
+ if marks is less than 61, grade is set to E.
+
+ Use this method when you need to set or reset grade.
+ An ELC(Executable Logic class) Tester with main method is given to you to test your code.
+--------------------------------
+prg:
+---
+class Student{
+    
+    //class variables
+    private int studentId;
+    private String studentName;
+    private int marks;
+    private char grade;
+	
+	
+	//set class variables studentId, studentName and marks
+	public void setStudentData(int studentId, String studentName,int marks) {
+		this.studentId=studentId;
+		this.studentName=studentName;
+	    this.marks=marks;
+	}
+	
+	//set class variable grade value using conditions 
+	public void calculateGrade() {
+	    if(marks>90){
+	        grade='A';
+	    }
+	    else if(marks>81&&marks<90){
+	        grade='B';
+	    }
+	    else if(marks>71&&marks<80){
+	        grade='C';
+	    }
+	     else if(marks>61&&marks<70){
+	        grade='D';
+	    }
+	     else if(marks<61){
+	        grade='E';
+	    }
+	
+	}
+	
+	//display student details as per the format provided in question
+	public String displayDetails() {
+		String studentDetails ="name="+studentName +",studentId="+studentId+",marks="+marks+",grade="+grade;
+		
+		
+		return studentDetails;
+	}
+}
+
+//An ELC(Executable Logic class) class with main method to test your code
+public class StudentDetails {
+	
+	public static void main(String args[]) {
+		//create object to Student class
+		Student obj=new Student();
+
+		
+		//call setStudentData method by passing studentId, name and marks
+		obj.setStudentData(1,"Akshitha",95);
+		
+		//call calculateGrade method to calculate grade
+		obj.calculateGrade();
+		
+		//call displayDetails method to print student details in given format
+	String res=	obj.displayDetails();
+	System.out.print(res);
+	}
+
+}
+==============================================================
+Create a BLC(Business Logic Class) called Bowler. Add below details to the class
+
+ 
+
+ 1. Instance variables:
+
+ name: private-String,
+
+ wickets: private-int,
+
+ matches: private-int,
+
+ balls_bowled: private-int,
+
+ runs_conceded: private-int.
+
+ 
+
+2. Method - bowlerDetails() : public void
+
+
+
+ Create a method name called bowlerDetails() that accepts name, wickets, matches, balls_bowled and runs_conceded.
+
+Method name: bowlerDetails 
+
+Return type: void
+
+ 
+
+ 3. Create below public methods,
+
+ 
+
+ Method name: computeBowlingAverage
+
+ Return type: void
+
+ 
+
+ This method should print the bowling average of the bowler by dividing runs_conceded with wickets.
+
+ Input:
+
+ name = "Sachin",
+
+ wickets = 10,
+
+ matches = 5,
+
+ balls_bowled = 750,
+
+ runs_conceded 463.
+
+ Output:
+
+ 
+
+ Name: Sachin
+
+ bowling_avg=46.3
+
+ 
+
+ Note: a. If any values are negative print 'Error'.
+
+ b. If runs_conceded or balls_bowled are greater than 0 when matches are 0 print 'Error'.
+
+ 
+
+ 
+
+ Method name: computeStrikeRate
+
+ Return type: void
+
+ 
+
+ This method should print the Strike Rate of the bowler by dividing runs_conceded with balls_bowled.
+
+ Input:
+
+ name = "Sachin",
+
+ wickets = 10,
+
+ matches = 5,
+
+ balls_bowled = 750,
+
+ runs_conceded 463.
+
+ Output:
+
+ 
+
+ Name: Sachin
+
+ Strike_rate=0.61733335
+
+ 
+
+ Note: a. If any values are negative print 'Error'.
+
+ b. If runs_conceded or balls_bowled are greater than 0 when matches are 0 print 'Error'.
+
+ 
+
+ Method name: showStatistics
+
+ Return type: void
+
+ 
+
+ This method should print the details of the batter.
+
+ Input:
+
+ name = "Sachin",
+
+ wickets = 10,
+
+ matches = 5,
+
+ balls_bowled = 750,
+
+ runs_conceded 463.
+
+ Output:
+
+ Name=Sachin
+
+ wickets=10
+
+ matches=5
+
+ balls_bowled=750
+
+ runs_conceded=463
+ Note: a. If any values are negative print 'Error'.
+ b. If runs_conceded or balls_bowled are greater than 0 when matches are 0 print 'Error'.
+ An ELC(Executable Logic Class) Test that contains main method. Use this class to test your code.
+
+-----------------------------------------------------------------------------
+
+import java.util.Scanner;
+class Bowler{
+    //Declare class variables
+    private String name;
+    private int wickets;
+    private int matches;
+    private int balls_bowled;
+     private int runs_conceded;
+
+	
+	//This method is used to set instance values
+	public void bowlerDetails(String name, int wickets, int matches, int balls_bowled, int runs_conceded ) 
+	{
+	this.name=name;
+	this.wickets=wickets;
+	this.matches=matches;
+	this.balls_bowled=balls_bowled;
+	this.runs_conceded=runs_conceded;
+	}
+	 
+	 //this method is used to calculate and print the bowling average 
+	 public void computeBowlingAverage() {
+	     System.out.println("*****************");
+	   if(wickets<0||balls_bowled<0||runs_conceded<0){
+	       System.out.println("Error");
+	   }
+	       else if(matches<=0||(runs_conceded>0||balls_bowled>0)){
+	         System.out.println("Error");  
+	       }
+	       else
+	       {
+	          double bowling_avg=(double)runs_conceded/(double)wickets; 
+	          System.out.println("name="+name+"\nbowling_avg="+bowling_avg);
+	           //System.out.println("*****************");
+	       }
+		 
+	 }
+	 
+	 //this method is used to calculate and print bowling strike rate
+	 public void  computeStrikeRate(){
+	    /* double strike_rate=runs_conceded/balls_bowled;
+	     System.out.print("Name="+name\n+"Strike_rate="+strike_rate);*/
+	     System.out.println("*****************");
+		 if(wickets<0||balls_bowled<0||runs_conceded<0){
+	       System.out.println("Error");
+		 }
+	       else if(matches==0||(runs_conceded>0||balls_bowled>0)){
+	         System.out.print("Error");
+	       }else
+	       {
+	          double strike_rate=(double)runs_conceded/(double)balls_bowled;
+	     System.out.println("Name="+name+"\nStrike_rate="+strike_rate); 
+	    // System.out.println("*****************");
+	       }
+		 
+	 }
+	 
+	 //this method is used to display bowler/batter statistics
+	 public void showStatistics() {
+	     System.out.println("*****************");
+	     if(wickets<0||balls_bowled<0||runs_conceded<0){
+	       System.out.println("Error");
+		 }
+	       else if(matches==0||(runs_conceded>0||balls_bowled>0)){
+	         System.out.println("Error");
+	       }else
+	       {
+	         
+	     System.out.println("Name="+name+"\nwickets="+wickets+"\nmatches="+matches+"\nbalss_bowled"+balls_bowled+"\nruns_coceded"+runs_conceded);
+	      //System.out.println("*****************");
+	       }
+	     
+	 }
+	
+	
+}
+
+//An ELC(Executable Logic class) class with main method to test your code
+public class BowlerDetails {
+
+	public static void main(String[] args) {
+		
+		//create new object to Bowler class
+		Bowler b1=new Bowler();
+Scanner sc=new Scanner(System.in);
+System.out.print("enter name of the bowler:");
+String name=sc.nextLine();
+System.out.print("enter wickets:");
+int wickets=sc.nextInt();
+System.out.print("enter matches:");
+int matches=sc.nextInt();
+System.out.print("enter balls_bowled:");
+int balls_bowled=sc.nextInt();
+System.out.print("enter runs_conceded:");
+int runs_conceded=sc.nextInt();
+  System.out.println("***********************");
+		
+		//call bowlerDetails method by passing bowler information.
+		
+		// this step will assign values to instance variables
+	b1.bowlerDetails(name,wickets,matches,balls_bowled,runs_conceded);
+		
+		//call this method to see bowling average
+		b1.computeBowlingAverage();
+		
+		// call this method to see bowling strike rate
+		b1.computeStrikeRate();
+		
+		// call this method to see bowler/batter statistics
+		
+		b1.showStatistics();
+
+	}
+
+}
+=====================================================================================
+Class Batter is given to you. Add below details to the class
+
+ 
+
+ 1. Instance variables:
+
+ name: private -String,
+
+ runs: private-int,
+
+ matches: private-int,
+
+ batting_avg: private-float.
+
+ 
+
+ 
+
+2.  Method batterDetails() : public void
+
+Create a method name called batterDetails() that accepts name, runs, matches.
+
+Method name: batterDetails
+
+Return type: void
+
+ 
+
+ 
+
+ 
+
+
+
+ 3. Create below public methods,
+
+ 
+
+ Method name: computeBattingAverage
+
+ Return type: void
+
+ 
+
+ This method should print the batting average of the batter by dividing run with matches.
+
+ Input: 
+
+Name: "Sachin"
+
+Runs: 18000
+
+Matches: 463
+
+
+
+ Output:
+
+ Name: Sachin
+
+ Batting_Avg: 38.87689
+
+ 
+
+ Note: a. If runs or matches values are negative print 'Error'.
+
+ b. If runs are greater than 0 when matches are 0 print 'Error'.
+
+ 
+
+ Method name: getStatistics
+
+ Return type: void
+
+ 
+
+ This method should print the details of the batter.
+
+ Input: 
+
+Name: "Sachin"
+
+Runs: 18000
+
+Matches: 463
+ Output:
+
+ Name: Sachin
+
+ Runs: 18000
+
+ Matches: 463
+ Note: a. If runs or matches values are negative print 'Error'.
+
+ b. If runs are greater than 0 when matches are 0 print 'Error'.
+ Given an ELC(Executable Logic class) class for Testing that contains main method. Use this class to test your code.
+
+-------------------------------------------------- 
+import java.util.Scanner;
+class Batter{
+	//declare instance variables
+private String name;
+ private int runs;
+ private int matches;
+	
+	//this method is used to assign values to instance variables
+	public void batterDetails(String name, int runs, int matches) {
+	this.name=name;
+	this.runs=runs;
+	this.matches=matches;
+	
+	}
+	
+	//This method is used to calculate batting average. use logic provided in question.
+	public void computeBattingAverage() {
+	    System.out.println("---------------------");
+	    if(runs<0||matches<0){
+	        System.out.println("Error");
+	    }
+	    else if(runs>0&&matches==0){
+	         System.out.println("Error");
+	    }
+	    else
+	    {
+		double  Batting_Avg=(double)runs/(double) matches;
+		System.out.println("Name="+name+"\nBatting)Avg="+Batting_Avg);
+	    }
+	}
+	
+	// this method is used to display statistics of a batter/bowler
+	public void getStatistics() {
+	    System.out.println("-------------------------");
+		 if(runs<0||matches<0){
+	        System.out.println("Error");
+	    }
+	    else if(runs>0&&matches==0){
+	         System.out.println("Error");
+	    }
+	    else
+	    {
+		System.out.println("Name="+name+"\nRuns="+runs+"\nMatches="+matches);
+	}
+	}
+}
+
+//An ELC(Executable Logic class) class with main method to test your code
+public class BatterDetails {
+
+	public static void main(String[] args) {
+		// create an object to Batter class
+		Batter b1=new Batter();
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter name:");
+		String name=sc.nextLine();
+		System.out.print("enter runs:");
+		int runs=sc.nextInt();
+		System.out.print("enter matches:");
+		int  matches=sc.nextInt();
+		
+		
+		
+		//call batterDetails method by passing Batter name, runs and number of matches he/she played
+		b1.batterDetails(name,runs,matches);
+		
+		//call computeBattingAverage method to get the batting average
+		b1.computeBattingAverage();
+		
+		//call getStatistics method to display Batter/Bowler details
+		
+		b1.getStatistics();
+	}
+
+}
+===========================================================================
+Create a BLC class Employee class with properties 
+private String firstName
+
+private String lastName
+
+private int employeeId
+
+private double salary
+
+private int noOfProject
+
+Create a setEmployeeData() method with 5 parameters to initialize all 
+
+the instance variables.
+
+Implement calculateSalary() method that will add extra ammount in salary based on NoOfProject by using following criteria
+
+NoOfProject is more than 5 and less that 10 then add 5000.
+
+NoOfProject is more than 10 and less that 20 then add 10000.
+
+NoOfProject is more than 20 then add 15000. 	
+ Override the toString method in Employee class to display employee details.
+ Take an ELC class Tester to test your logic.
+-------------------------------------------------------------
+public class Employee {
+
+	//declare instance variables
+ private String firstName;
+ private String lastName;
+ private int employeeId;
+ private double salary;
+ private int noOfProject;
+
+	
+	//implement setEmployeeData method which takes instance type variables as parameters 
+	//later initialise instance variables
+	//return type is void
+public  void setEmployeeData(String firstName,String lastName,int employeeId,double salary,int noOfProject){
+    this.firstName = firstName;
+    this.lastName=lastName;
+    this.employeeId=employeeId;
+    this.salary=salary;
+    this.noOfProject=noOfProject;   
+}
+
+//implement calculate method no parameters and no return type
+	//increment salary based on condition
+public  void calculateSalary(){
+    if(noOfProject>5 && noOfProject<10){
+    salary+=5000;
+    }
+    else if(noOfProject>10 && noOfProject<20){
+    salary+=10000;
+    }
+    else if(noOfProject>20){
+    salary+=15000;
+    }
+    else {
+        salary += 0;
+    }
+}
+//override toString method
+	
+	public  String toString(){
+	    String employeeDetails="employeeId="+employeeId+", employeeName="+firstName+lastName+"employee salary="+salary;
+	    return employeeDetails;
+	}
+
+	//override toString method
+	
+	
+}
+=======================================================================
+Create a class with a method to find the difference between the sum of the squares and the square of the sum of the first n natural numbers.
+Method Description :
+Method Name 	 calculateDifference 
+Access Modifier public,static	
+Argument 	 int n 
+Return Type 	 int 
+Logic 	Find the difference between the sum of the squares of the first n natural numbers and the square of their sum. 
+For Example if n is 10,you have to find 
+(1^2+2^2+3^2+….9^2+10^2)-(1+2+3+4+5…+9+10)^2 
+
+-----------------------------------------------------
+ELC
+====
+
+BLC:
+-----
+public class SumOfTheSquaresAndSquareOftheSums {
+  
+ 
+ public static int calculateDifferece(int num){
+     int sum=0,sqsum=0;
+     for(int i=1;i<=num;i++){
+       sum+=i;
+       
+       sqsum+=(int)Math.pow(i,2);
+     }
+     int sumsq=(int)Math.pow(sum,2);
+    // System.out.print(sumsq);
+    // System.out.print(sqsum);
+     int res=sqsum-sumsq;
+     return res;
+ }
+  //create a public static method named as calculateDifference(). which takes int as parameter and returns int
+  
+}
+----------------------------------------------------------
+Create a method to check if a number is a power of two or not
+Method Description :-
+Method Name: 	checkNumber 
+Access Modifier : public,static
+Argument :	int  
+Return Type :	boolean 
+Logic 	Check if the input is a power of two. 
+Ex: 8 is a power of 2 
+====================================
+ELC
+---
+import java.util.Scanner;
+public class PowerOfTwoTest {
+    public static void main(String[] args) {
+        
+        //create a scanner object and read a number from user;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a number:");
+        int num=sc.nextInt();
+        boolean res=VerifyPowerOfTwo.checkNumber(num);
+        if(res){
+            System.out.print(num+" is a power of 2");
+        }
+        else
+        {
+            System.out.print(num+" is not a power 2");
+        }
+        
+        //call checkNumber() method using BLC class name
+		//print the results based on return value.
+		
+		
+		//close scanner
+    }
+}
+------------------------------------------------------------------------------
+BLC
+----
+public class VerifyPowerOfTwo
+{
+   public static boolean checkNumber(int num){
+       int c=0;
+       int res=0;
+       int temp=num;
+       while(temp!=0){
+          if(temp%2==0) {
+           c++;
+          }
+           temp/=2;
+       }
+    int power=(int)Math.pow(2,c);
+    return power==num;
+   }
+   //create a public static method named as checkNumber().which takes int as parameter and returns boolean value
+}
+======================================================================
+Create a method to find the sum of the cubes of the digits of an n digit number
+
+
+Method Name 	findSum 
+Method Description 	Find the sum cubes of the digits of an n digit number 
+Argument 	Int 
+Return Type 	Int 
+Logic 	Return the sum of cubes of the digits of an n digit number 
+Example 
+Input : 123 
+Output : 1^3+2^3+3^3= 1+8+27=36 
+----------------------------------------------------------------------------------
+ELC
+----
+import java.util.Scanner;
+public class TestSumOfCubes {
+    public static void main(String[] args) {
+        //create a scanner object and read a number from user;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a number:");
+        int num=sc.nextInt();
+      int res=SumOfCubesOfDigits.findSum(num);
+       System.out.print(res); 
+        
+        //call findSum method using class name and print result
+        
+        
+        //close scanner object;
+    }
+}
+BLC
+---------
+public class SumOfCubesOfDigits
+{
+    //create a public static method name as findSum(). which takes int as parameter and returns int
+    public static int findSum(int num){
+        int sum=0;
+        while(num!=0){
+            sum+=(int)Math.pow(num%10,3);
+            num/=10;
+        }
+        
+        return sum;
+    }
+}
+=====================================================
+We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
+
+
+
+Method Name:- monkeyTrouble()
+
+Modifier:- public,static
+
+Return type:- boolean
+Arguments:- it takes two Boolean.
+ monkeyTrouble(true, true) → true
+ monkeyTrouble(false, false) → true
+ monkeyTrouble(true, false) → false
+Example:
+Enter true if A-Monkey is smiling. else enter false
+true
+Enter true if B-Monkey is smiling. else enter false
+true
+We are in trouble 
+====================================
+ELC
+---------
+import java .util.Scanner;
+public class TestMonkeyTrouble {
+    public static void main(String[] args) {
+        
+        //create a scanner object and read two boolean values;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter two boolean values:");
+        boolean a=sc.nextBoolean();
+        boolean b=sc.nextBoolean();
+        
+         if(MonkeyTrouble.monkeyTrouble(a,b)){
+             System.out.print("we are in trouble");
+         }
+         else{
+             System.out.print("we are in not trouble");
+         }
+        //call monkeyTrouble() method using BLC class name
+		//print the results based on return value.
+		
+		
+		//close scanner object
+    }
+}
+--------------------------------------------
+BLC
+----
+public class MonkeyTrouble
+{
+ 
+   //create a public static method name as monkeyTrouble(). which takes boolean and boolean as parameters and returns boolean
+   public static boolean monkeyTrouble(boolean a,boolean b){
+       return !(a^b);
+   }
+}
+============================================
+*****************************************************6/12/23***************************************************************
+Create a class Address (Business Logic Class)
+
+ Instance Variables:
+
+ private String cityName;
+
+ private String districtName;
+
+ private String stateName;
+
+ Create a parameterized constructor initialize the instance variable of the class.
+ Override toString() from Object class to print Address class properties.
+ Create a class Employee (Business Logic Class)
+
+ Instance Variables:
+
+ private int empId;
+
+ private String empName;
+
+ private Address address; //HAS-A relation
+
+ Create a parameterized constructor initialize the instance variable of the class.
+ Override toString() from Object class to print Employee class properties.
+ Create a class Main (Executable Logic Class) which contains main method to print Employee class properties using toString() method.
+Output:
+Employee[
+
+ Employee Number: 123
+
+ Employee Name: Naresh IT
+
+ Address[ City: Ameerpet, District: Hyderabad, State: Telangana ]
+
+]
+-----------------------------------------------------------------------------------
+//BLC class for Address
+import java.util.*;
+class Address {
+	
+	//instance variables
+	private String city;
+	private String district;
+	private String state;
+	
+
+	//parameterized constructor is used to assign values to instance variables
+	public Address(String city, String district, String state) {
+	    this.city=city;
+	    this.district=district;
+	    this.state=state;
+	}
+	
+	// this toString method is used to print Address object's instance variable details
+	public String toString() {
+		String address = "[City: "+city+", District: "+district+", State: "+state+".]";
+		return address;
+	}
+}
+
+/BLC class for Employee
+class Employee{
+	//instance variables
+	private int employeeId;
+	private String employeeName;
+	private Address empAddress;
+	
+	//parameterized constructor is used to assign values to instance variables
+	public Employee(int employeeId, String employeeName, Address empAddress) {
+		this.employeeId=employeeId;
+		this.employeeName=employeeName;
+		this.empAddress=empAddress;
+	}
+	
+	// this toString method is used to print Employee object's instance variable details
+		public String toString() {
+			String employee = "Employee [Employee Number: "+employeeId+", Employee Name: "+employeeName+", Address "+empAddress+"]";
+			return employee;
+		}
+}
+
+
+/An ELC class to test our code
+public class EmployeeDetails {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the EmpName: ");
+		String name=sc.nextLine();
+		System.out.println("Enter the EmpId: ");
+		int id=sc.nextInt();
+		System.out.println("Enter the EmpAdd:- \n1. Enter the City: ");
+		String city=sc.next();
+		System.out.println("2. Enter the District: ");
+		String district=sc.next();
+		System.out.println("3. Enter the State: ");
+		String state=sc.next();
+		System.out.println("------------------------");
+		
+		//create an object to Address class using parameterized constructor
+		Address ad=new Address(city,district,state);
+		
+		//create an object to Employee class using parameterized constructor
+		Employee emp=new Employee(id,name,ad);
+	
+		//call toString method to print employee details
+		System.out.println("-------------------------");
+		System.out.println(emp);
+		
+	}
+
+}
+
+---------------------------------------------------------------
+Create a class Order (Business Logic Class)
+
+ Instance Variables:
+
+ private int orderId;
+
+ private String itemName;
+
+ private double itemPrice;
+
+ Create a parameterized constructor initialize the instance variable of the class.
+
+ Override toString() from Object class to print Order class properties.
+ Create a class Customer (Business Logic Class)
+
+ Instance Variables:
+
+ private int customerId;
+
+ private String customerName;
+
+ private String customerAddress;
+
+ private Order order; //HAS-A relation
+
+ Create a parameterized constructor initialize the instance variable of the class.
+
+ Override toString() from Object class to print Customer class properties.
+ Create a class Zomato (Executable Logic Class) which contains main method to print Customer class properties using toString() method.
+
+Output:
+
+Customer[
+
+ Customer Id: 232
+
+ Customer Name: Ravi Kumar
+
+ Customer Addres: Ameerpet
+
+ Order[ Order ID: 24, Item Name: Burger, Item Price: 149.0 ]
+
+]
+----------------------------------------------
+//BLC class for Order
+import java.util.*;
+class Order {
+	
+	//instance variables
+	private int orderId;
+	private String itemName;
+	private double itemPrice;
+
+	//parameterized constructor is used to assign values to instance variables
+	public Order(int orderId, String itemName, double itemPrice) {
+		this.orderId=orderId;
+		this.itemName=itemName;
+		this.itemPrice=itemPrice;
+	}
+	
+	// this toString method is used to print Order object's details
+	public String toString() {
+		String order = "[Order ID: "+orderId+", Item Name: "+itemName+", Item Price: "+itemPrice+" ]";
+		return order;
+	}
+}
+
+/BLC class for Customer
+class Customer{
+	//instance variables
+	private int customerId;
+	private String customerName;
+	private String customerAddress;
+	private Order order;
+	
+	//parameterized constructor is used to assign values to instance variables
+	public Customer(int customerId, String customerName, String customerAddress, Order order) {
+		this.customerId=customerId;
+		this.customerName=customerName;
+		this.customerAddress=customerAddress;
+		this.order=order;
+	}
+	
+	// this toString method is used to print Customer object's details
+		public String toString() {
+			String customer = "Customer [Customer Id: "+customerId+", Customer Name: "+customerName+", Customer Addres: "+customerAddress+", Order"+order+"]";
+			return customer;
+		}
+}
+
+
+//An ELC class to test our code
+public class Zomato {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the CustomerName: ");
+		String name=sc.nextLine();
+		System.out.println("Enter the CustomerAddress: ");
+		String ad=sc.nextLine();
+		System.out.println("Enter the CustomerID: ");
+		int id=sc.nextInt();
+		System.out.println("----------------------------");
+		System.out.println("----------------------------");
+		System.out.println("Enter the Order Details Bellow :-");
+		System.out.println("1. Order ID: ");
+		int oid=sc.nextInt();
+		System.out.println("2. Item Name: ");
+		String oname=sc.next();
+		System.out.println("3. Item Price: ");
+		double oip=sc.nextDouble();
+		System.out.println("----------------------------");
+		//create an object to Order class using parameterized constructor
+		Order ord=new Order(oid,oname,oip);
+		
+		//create an object to Customer class using parameterized constructor
+		Customer cus=new Customer(id,name,ad,ord);
+		
+		//call toString method to print Customer details
+		System.out.println("----------------------------");
+		System.out.println(cus);
+		System.out.println("----------------------------");
+	}
+
+}
+==========================================
+ --------------------------------constructor----------------------------
+                                 -----------
+
+ 
+ Correct
+Question: 1
+Which of the following is/are true about constructors in Java?
+a.Constructor name should be same as class name.
+b.If you don’t define a constructor for a class, a default parameter less constructor is automatically created by the compiler.
+c.The default constructor calls super() and initializes all instance variables to default value like 0, null.
+d.If we want to call parent class constructor, it must be called in first line of constructor.
+
+A. 1,2 and 3
+
+
+B.2
+
+
+C. 1
+
+Correct Answer
+D. 1,2,3 and 4
+---------------------
+Question: 2
+Which of the following modifier is not applicable for constructors?
+A. private      
+B. protected
+C. public
+Correct Answer
+D. final
+------------------------------------------------
+Question: 3
+The implicit return type of a constructor is ?
+A. void
+B. There is no return type
+Correct Answer
+C. a class object in which it is defined
+D. None of these
+--------------------------
+Question: 4
+public class Test
+{ }
+What is the prototype of the default constructor ?
+A. public Test(void)
+B. Test()
+C. Test(void)
+Correct Answer
+D. public Test()
+---------------------------------------------
+Question: 5
+Can we define method with same name of class name?
+
+Correct Answer
+A. Yes
+B. No
+----------------------------------------------
+Question: 6
+What happens if we add return type to constructor ?
+
+A. Compile time error
+B. Run Time Error
+Correct Answer
+C. JVM treats that as method
+D. None of these
+-------------------------------------------------
+Question: 7
+Can we declare constructor as private ?
+
+Correct Answer
+A. Yes
+B. No
+-------------------------------------------------------
+Question: 8
+What is the default accessibility modifier of a default constructor?
+
+A. private
+B. protected
+C. default
+Correct Answer
+D. same as class accessibility modifier
+------------------------------------------------------------
+Question: 9
+Can we define a constructor using all four access modifiers: public, protected, default and private?
+
+Correct Answer
+A. Yes
+B.No
+----------------------------------------------------------------
+Question: 10
+Choose correct option for the following code
+
+public class ConstructorTest {
+public int a = 10;
+public String ConstructorTest(int a) {
+this.a = a;
+}
+}
+
+A. Run time error
+B. No error
+Correct Answer
+C. Compile time error
+D. 10
+----------------------------------------------------------------
+Question: 11
+Choose correct option for the following code
+
+public class ConstructorTest {
+
+public int a = 10;
+public ConstructorTest() {
+}
+public ConstructorTest(int a) {
+    this.a = a;
+    System.out.println(a);
+}
+
+public static void main(String[] args) {
+    ConstructorTest test = new ConstructorTest();
+}
+}
+-----------------------------------------
+A. Run time error
+Correct Answer
+B. Run successfully
+C. Compile time error
+D. 10
+-------------------------------------------
+Question: 12
+What is the output of the following code
+public class ConstructorTest {
+public int a = 100;
+public ConstructorTest() {
+System.out.println(a);
+}
+
+public static void main(String[] args) {
+    ConstructorTest test = new ConstructorTest();
+}
+}
+
+---------------------------------------------
+A. Runtime error
+B. Compile time error
+Correct Answer
+C. 100
+D. No Output
+--------------------------------------------------
+Question: 13
+Choose correct option for the following code
+public class ConstructorTest {
+int a;
+public ConstructorTest(int a) {
+this.a =a;
+}
+
+public static void main(String[] args) {
+    ConstructorTest nit = new ConstructorTest(10);
+    nit.a;
+}
+}
+
+-----------------------------
+A. Runtime error
+Correct Answer
+B. Compile time error
+C. No Output
+D. 10
+------------------------------------
+Question: 14
+What is the output of the below program?
+
+class T
+{
+int pCode= 99;
+}
+public class Main
+{
+public static void main(String args[])
+{
+T t1 = new T();
+System.out.println(t1.pCode);
+}
+}
+
+-----------------------------------------------
+Correct Answer
+99
+Compiler error
+No Output
+Runtime error
+----------------------------------------------------
+Question: 15
+What is the output of the below program?
+class T {
+int x = 23;
+T() {
+x = 45;
+}
+}
+public class Main {
+public static void main(String args[]) {
+T t1 = new T();
+System.out.println(t1.x);
+}
+}
+
+---------------------------------------------
+23
+Correct Answer
+45
+Compiler error
+No Output
+--------------------------------------------------
+Question: 16
+What is the output of the below program?
+class Complex {
+private double re, im;
+public Complex(double re, double im) {
+this.re = re;
+this.im = im;
+}
+Complex(Complex c) {
+System.out.println(“Copy constructor called”);
+re = c.re;
+im = c.im;
+}
+public String toString() {
+return “(” + re + ” + ” + im + “)”;
+}
+}
+class Main {
+public static void main(String[] args) {
+Complex c1 = new Complex(10, 15);
+Complex c2 = new Complex(c1);
+Complex c3 = c1;
+System.out.println(c2);
+}
+}
+---------------------------------------------------
+Copy constructor called
+(10.0 + 15.0)
+
+Compiler error
+
+Correct Answer
+Copy constructor called
+(10.0 + 15.0)
+
+----------------------------------------------------------------
+Question: 17
+What is the output of the below program?
+public class Test7 {
+private Test7 (int x) { //line 1
+System.out.print(x);
+}
+private static Test7() { //line 2
+System.out.print(25);
+}
+public static void main(String[] args){
+Test7 t = new Test7(35);
+}
+}
+-------------------------------------
+25
+null
+Correct Answer
+Compiler error
+35
+----------------------------------------------
+Question: 18
+What is the output of the below program?
+public class Test7 {
+private Test7 (int x) { //line 1
+System.out.print(x);
+}
+private final Test7() { //line 2
+System.out.print(25);
+}
+public static void main(String[] args){
+Test7 t = new Test7(35);
+}
+}
+
+--------------------------------------------
+25
+Correct Answer
+Compiler error
+null
+35
+----------------------------------------------------
+Question: 19
+What is the output of the below program?
+class Product {
+public int num;
+public void call(Product ref) {
+ref.num++;
+}
+}
+public class Test13 {
+public static void main (String[] args) {
+Product p = new Product();
+p.num = 1;
+p.call(p);
+System.out.println(p.num);
+}
+}
+-------------------------------------------
+Compiler error
+Runtime error
+1
+Correct Answer
+2
+----------------------------------------------
+Question: 20
+What is the output of the below program?
+class Product {
+int x;
+int y;
+public Product(int x,int y) {
+this.x = x;
+this.y = y;
+}
+public void call() {
+System.out.println(“call method called”);
+}
+}
+public class Test14 {
+public static void main (String[] args) {
+Product p = new Product();
+p.call();
+}
+}
+-------------------------------------------------
+Correct Answer
+Compiler error
+Runtime error
+No output
+call method called
+----------------------------------------------------
+Question: 21
+What is the output of the below program?
+class Employee{
+private String name;
+public Employee(String name) {
+this.name=name;
+}
+}
+public class Test16 {
+public static void main(String[] Java) {
+Employee e = new Employee(“JavaDeveloper”);
+System.out.println(“Emp Name : “+e.name);
+}
+}
+
+------------------------------------------------------------
+Incorrect Answer
+Emp Name : JavaDeveloper
+Correct Answer
+Compiler error
+Runtime error
+No output
+--------------------------------------------------------
+Question: 22
+What is the output of the below program?
+class Person{
+Person(){
+System.out.println(“Hello constructor!”);
+return;
+}
+}
+public class Test17 {
+public static void main(String[] var) {
+Person p = new Person();
+}
+}
+
+Correct Answer
+-----------------
+Hello constructor!
+Compiler error
+Runtime error
+No output
+=======================9/12/23=======================================================================================
+
+Create a class Employee (Business Logic Class)
+
+ Instance Variables:
+
+ employeeNumber : private-int
+
+ employeeName : private-String
+
+ employeeSalary:private -double
+ Create a parameterized constructor to initialilize all the fields.
+ Create getters method for all the instance variables.
+ Create another class Main which contains main method (ELC class) which will receive all the instance variable value from BLC class.
+ In this ELC class print the following details
+
+ a) If salary is >=60000, Print Employee is a Developer
+ b) If salary is >=40000 and <60000 , Print Employee is a Designer
+ c) If Salary is <40000 , Print Employee is a Tester
+Input:
+232, "Naresh Kumar", 43000
+Output:
+Employee is a Designer
+------------------------------------------------------------------------------
+(com.akshi.getter)
+------------------
+Employee.java
+public class Employee{
+    
+    // Declare instance variables
+    
+	private  int employeeNumber;
+private String employeeName;
+private double employeeSalary;
+public Employee(int employeeNumber,String employeeName,double employeeSalary ){
+this.employeeNumber=employeeNumber;
+this.employeeName=employeeName;
+this.employeeSalary=employeeSalary;
+	
+	// parameterized constructor is used to assign values to instance variables
+	 Employee(int empNumber, String empName, double empSalary){
+	
+		
+	}
+	
+	 /**
+	  * getter method for variable employeeNumber
+	  * @return int
+	  */
+	public int getEmployeeNumber() {
+	
+	 return this.employeeNumber;
+}
+public String getEmployeeName() {
+	return this.employeeName;
+}
+public double getEmployeeSalary() {
+	return this.employeeSalary;
+}
+public String toString() {
+	return "number"+employeeNumber+"name"+employeeName+"salary"+employeeSalary+" ";
+}
+	}
+	/**
+	 * getter method for employeeName
+	 * @return String
+	 */
+
+	/**
+	 * getter method for employeeSalary
+	 * @return double
+	 */
+	
+	}
+}
+---------------------------------------------------
+AccessInstanaceVariablesUsingGetter.java
+// ELC class with main method to test our code
+import java.util.Scanner;
+public class AccessInstanaceVariablesUsingGetter {
+
+	public static void main(String[] args) {
+		
+		// create an object to Employee class using parameterized constructor
+		
+		// get salary from getter method
+		
+		//print designation based on salary
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter employee number:");
+        int empNum=sc.nextInt();
+        System.out.println("enter employee name:");
+        String empName=sc.next();
+        System.out.println("enter employee salary:");
+        double empSal=sc.nextDouble();
+        Employee e1=new Employee(empNum,empName,empSal);
+        int num=e1.getEmployeeNumber();
+        String name=e1.getEmployeeName();
+        double sal=e1.getEmployeeSalary();
+       if(sal>=60000) {
+    	   System.out.println("employee is a Developer");
+       }
+       else if(sal>=40000) {
+    	   System.out.println("employee is a Designer"); 
+       }
+       else {
+    	   System.out.println("employee is Tester");
+       }
+		
+
+	}
+
+}
+------------------------------------------------------------------------------------------------------
+Create a class Employee (Business Logic Class)
+Instance Variables: 
+employeeId :private-int
+employeeName : private-String
+employeeSalary: private-double
+Create a parameterized constructor to initialilize all the fields.
+Create a static method getEmployeeObject() in the Employee class
+  Method Name : getEmployeeObject()
+   Parameter : no parameter
+  Return type : Employee
+Access modifier : public
+getEmployeeObject() method of Employee class should take employeeId, employeeName, employeeSalary from the keyboard to initialize the instance variables, Create and return the Employee object from this method.
+Override toString() from Object class to print Employee class properties.
+Create another class Main which contains main method (ELC class). Accept 5 Employee Object from keyboard and print their data using toString() method 
+--------------------------------------------------------------------------------------------------------
+(com.lab.getter)
+-----------------
+EmployeeTest.java(ELC)
+import java.util.Scanner;
+public class EmployeeTest {
+	public static void main(String[] args) {
+		// iterate loop for 5 times and call getEmployeeObject for each loop
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("how many time you want new obj");
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++) {
+        	//Employee e1=new Employee();
+        	System.out.println(Employee.getEmployeeObject());
+        }
+	}
+-------------------------------------------------
+Employee.java
+---------------
+
+package com.lab.getter;
+
+import java.util.Scanner;
+
+public class Employee {
+private int employeeId;
+private String employeeName;
+private double employeeSalary;
+public Employee ( int employeeId,String employeeName,double employeeSalary) {
+	this.employeeId=employeeId;
+	this.employeeName=employeeName;
+	this.employeeSalary=employeeSalary;
+}
+
+
+public int getEmployeeId() {
+	return employeeId;
+}
+
+
+public void setEmployeeId(int employeeId) {
+	this.employeeId = employeeId;
+}
+
+
+public String getEmployeeName() {
+	return employeeName;
+}
+
+
+public void setEmployeeName(String employeeName) {
+	this.employeeName = employeeName;
+}
+
+public double getEmployeeSalary() {
+	return employeeSalary;
+}
+public void setEmployeeSalary(double employeeSalary) {
+	this.employeeSalary = employeeSalary;
+}
+public  String toString() {
+	return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeSalary="
+			+ employeeSalary + "]";
+}
+public static Employee getEmployeeObject() {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("enter employee id");
+	int empId=sc.nextInt();
+	System.out.println("enter employee name");
+	sc.nextLine();
+	String ename=sc.nextLine();
+	System.out.println("enter employee salary ");
+	double esal=sc.nextDouble();
+	return new  Employee(empId,ename,esal);
+}
+}
+
+------------------------------------------------------------
+============================11/12/23================================================
+Create a Java (BLC)class named Employee with following attributes:
+private String name 
+private int age 
+private double salary and 
+private String department
+Implement a parameterised constructor to initialize all the instance variable of Employee.
+Implement a copy constructor for the Employee class that takes a Employee object and initialize the new Employee object with the same attributes.
+Take a pair of setter and getter method for all the instance variables.
+In the Employee class, create a method named raiseSalary(double percentage) that increases the salary of the employee by the specified percentage.
+Create a ELC class and create Employee object and sets its attributes. 
+Then, use the raiseSalary method to increase the employee's salary by 10%. Create a copy of the Employee object using the copy constructor and print the attributes of both the original and the copy of the Employee objects to confirm that the copy constructor works correctly and that the raiseSalary method did not affect the attributes of the copy of the Employee object.
+----------------------------------------------------------------
+public class Employee {
+private String name;
+private int age;
+private double salary;
+private String department;
+public Employee(String name,int age,double salary,String department) {
+	this.name=name;
+	this.age=age;
+	this.salary=salary;
+	this.department=department;
+}
+	public  Employee(Employee e1) {
+		this.age=e1.age;
+		this.name=e1.name;
+		this.salary=e1.salary;
+		this.department=e1.department;
+	}
+	
+public  void  raiseSalary(double per) {
+	/*double percentage=this.salary*per/100;
+   this.salary+=percentage;*/
+   this.salary+=(1+per/100);
+	
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	this.age = age;
+}
+public double getSalary() {
+	return salary;
+}
+public void setSalary(double salary) {
+	this.salary = salary;
+}
+public String getDepartment() {
+	return department;
+}
+public void setDepartment(String department) {
+	this.department = department;
+}
+@Override
+public String toString() {
+	return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + ", department=" + department + "]";
+}
+}
+------------------------------------------------------------------
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		//Scanner sc=new Scanner(System.in);
+		
+		Employee e1=new Employee("akshi",21,30000.0,"developer");
+		Employee e2=new Employee(e1);
+         e1.raiseSalary(10);
+         System.out.println(e1);
+         System.out.println(e2);
+	}
+
+}
+-------------------------------------------------------------------------
+Create a Java class named Car with following attributes:
+ private String brand
+ private String model
+ private int year and
+ private Driver driver
+Implement a parameterised constructor to initialise all the instance variable of Car.
+Implement one copy constructor for the Car class that takes a Car object and initialize the new Car object with the same attributes.
+Take a pair of setter and getter method for all the instance variables.
+In the Car class, create a method named changeDriver(Driver newDriver) that changes the driver of the car to the specified driver.
+Create a Driver class and the class should have following attributes:
+ private String name and
+ private int age 
+Implement a parameterised constructor to initialise all the instance variable of Driver.
+Take a pair of setter and getter method for all the instance variables.
+Create a Main class that creates a Car object and sets its attributes and the attributes of its driver. Then, create a copy of the Car object using the copy constructor and print the attributes of both the original and the copy of the Car objects to confirm that the copy constructor works correctly.
+Finally, use the changeDriver() method to change the driver of the original Car object, and print the attributes of both the original and the copy of the Car objects again to confirm that the copy constructor created a deep copy of the Driver object and that the changeDriver method did not affect the driver of the copy of the Car object.
+---------------------------------------------------------------
+public class Driver {
+private String name;
+private int age;
+public Driver(String name,int age) {
+	this.name=name;
+	this.age=age;
+	
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public int getAge() {
+	return age;
+}
+public void setAge(int age) {
+	this.age = age;
+}
+@Override
+public String toString() {
+	return "Driver [name=" + name + ", age=" + age + "]";
+}
+}
+-------------------------------------------
+car.java
+----------
+public class Car {
+
+	private  String brand;
+	private String model;
+	private int year;
+	private Driver driver;
+	public Car(String brand,String model,int year,Driver driver) {
+		this.brand=brand;
+		this.model=model;
+		this.year=year;
+		this.driver=driver;
+	}
+		public Car(Car c1) {
+			this.brand=c1.brand;
+			this.model=c1.model;
+			this.year=c1.year;
+			this.driver=c1.driver;
+		}
+		
+
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	
+	public Driver getDriver() {
+		return driver;
+	}
+	public void setDriver(Driver driver) {
+		this.driver = driver;
+	}
+	public void changeDriver(Driver newDriver) {
+		this.driver=newDriver;
+	}
+	@Override
+	public String toString() {
+		return "Car [brand=" + brand + ", model=" + model + ", year=" + year + ", driver=" + driver + "]";
+	}
+	}
+---------------------------------------------------------------------------
+public class CarMain {
+
+	public static void main(String[] args) {
+		Driver d1=new Driver("ravi",40);
+		Car c1=new Car("benzz","v3",2019,d1);
+		
+		Driver d2=new Driver("raju",45);
+		Car c2=new Car(c1);
+		c1.changeDriver(d2);
+		System.out.println(c1);
+		System.out.println(c2);
+
+	}
+}
+--------------------------------------------------------------------------------
+========================12/12/23============================================
+Create a BLC class called A
+
+ 
+
+ Instance variable
+
+ private int data = 15;
+
+ 
+
+ Create a no-argument constructor, where create the object for class B (Another BLC class) and call the non-static display method available in class B.
+
+ 
+
+ Create an instance method show() in class A, which will print instance variable data.
+
+ 
+
+ Create an another BLC class B
+
+ Instance variable
+
+ private A obj;
+
+ 
+
+ Create a parameterized constructor which takes class A as a parameter to initialize the instance variable
+
+ 
+
+ Create a display method inside class B which internally calling the show() method of class A
+
+ 
+
+ Create an ELC class Test which contains main method to test the application.
+
+ 
+
+ Note :- BLC and ELC all the classes must be declared as public.
+
+ 
+
+ Expected Output:
+
+instance variable data in A = 15
+
+---------------------------------------------
+package com.akshi.thiskey;
+public class A {
+	//Declare instance variable 
+		private int data=10;
+		
+		
+		
+		//default constructor for class A
+		public A(){
+		    B b1=new B(this);
+		    b1.display();
+		}
+		
+		
+		// non static show method to display instance variable
+		public void show(){
+		    
+		    System.out.println(data);
+		}
+}
+----------------------------------------------
+public class B {
+ private A obj;//HAS- A Relation
+ public B(A obj) {
+	 this.obj=obj;
+ }
+	 public  void  display(){
+	obj.show(); 
+	 }
+ }
+-------------------------------------------------
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ A a1=new A();
+	}
+
+}
+----------------------------------------
+NOTE:
+-----
+“this” operator /keyword this k object keyword/operator indicates the 
+current(i.e the object which is called for calling methods & variable of that 
+class) 
+Using this operator we can assign local variable values to global variable values 
+when both the variable name is same
+------------------------------------------------------
+What is the output of the following code?
+class Example {
+int x;
+int y;
+
+public Example(int X, int Y) {
+    x = X;
+    y = Y;
+}
+
+public Example(Example e) {
+    this.x = e.x;
+    this.y = e.y;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+Example e1 = new Example(10, 20);
+System.out.println(e1.x +” “+e1.y);
+Example e2 = new Example(e1);
+e1.x = 30;e2.y = 50;
+System.out.println(e2.x+” “+e2.y);
+}
+}
+
+
+Correct Answer
+A. 10 20
+10 50
+
+
+B. 10 20
+30 50
+
+
+C. 10 20
+10 20
+
+
+D. 10 20
+30 20
+
+ Correct
+Question: 2
+What is the output of the following code?
+class Example {
+int x;
+int y;
+
+public Example(int x, int y) {
+    this.x = x;
+    this.y = y;
+}
+public Example(Example e) {
+    e.x = this.x;
+    e.y = this.y;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+Example e1 = new Example(10, 20);
+System.out.println(e1.x +” “+e1.y);
+Example e2 = new Example(e1);
+e1.x = 30;e1.y = 30;
+System.out.println(e2.x+” “+e2.y);
+}
+}
+
+
+
+A. 10 20
+30 30
+
+
+B. 0 0
+0 0
+
+
+C. 10 20
+10 20
+
+Correct Answer
+D. 10 20
+0 0
+
+ Incorrect
+Question: 3
+What is the output of the following code?
+class Example {
+int x;
+int y;
+
+public Example(int x, int y) {
+    this.x = x;
+    this.y = y;
+}
+public void Example(Example e) {
+    this.x = e.y;
+    this.y = e.y;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+Example e1 = new Example(10, 20);
+Example e2 = new Example(e1);
+e1.x = 30;e1.y = 30;
+System.out.println(e1.x +” “+e1.y);
+System.out.println(e2.x+” “+e2.y);
+}
+}
+
+
+
+A. 10 20
+30 30
+
+Incorrect Answer
+B. 30 30
+10 20
+
+
+C. 30 30
+30 30
+
+Correct Answer
+D. Compile time error
+
+ Correct
+Question: 4
+What is the output of the following code?
+class Example {
+int x;
+int y;
+
+public Example(int x, int y) {
+    this.x = x;
+    this.y = y;
+}
+
+public Example(Example e, Example e1) {
+    this.x = e1.y + e.y;
+    this.y = e.x + e1.x;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+Example e1 = new Example(10, 20);
+Example e2 = new Example(e1, e1);
+System.out.println(e1.x + ” ” + e1.y);
+System.out.println(e2.x + ” ” + e2.y);
+}
+}
+
+
+
+A. 10 20
+30 40
+
+
+B. 10 20
+20 40
+
+Correct Answer
+C. 10 20
+40 20
+
+
+D. 20 40
+20 40
+
+ Correct
+Question: 5
+What is the output of the following code?
+class Example {
+int x;
+int y;
+
+public Example(int x, int y) {
+    this.x = x;
+    this.y = y;
+}
+
+public Example(Example e) {
+    this.x += ++e.x;
+    this.y += ++e.y;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+Example e1 = new Example(10, 20);
+Example e2 = new Example(e1);
+System.out.println(e1.x + ” ” + e1.y);
+System.out.println(e2.x + ” ” + e2.y);
+}
+}
+
+
+Correct Answer
+A. 11 21
+11 21
+
+
+B. 10 20
+11 21
+
+
+C. 11 21
+10 20
+
+
+D. Compile time error
+
+ Correct
+Question: 6
+What is the output of the following code?
+class Calculator {
+IntegralNumber num;
+FloatingNumber floatNum;
+
+public Calculator(IntegralNumber num, FloatingNumber floatNum) {
+    super();
+    this.num = num;
+    this.floatNum = floatNum;
+}
+
+public void add(int a , double b) {
+    System.out.println(a+b);
+    System.out.println(num.a+floatNum.a);
+}
+}
+class IntegralNumber {
+int a = 2;
+int b = 3;
+public int add() {
+return a+b;
+}
+}
+class FloatingNumber {
+double a = 5.5;
+double b = 10.5;
+public double add() {
+return a+b;
+}
+}
+public class TestMCQ {
+public static void main(String[] args) {
+IntegralNumber i = new IntegralNumber();
+FloatingNumber f = new FloatingNumber();
+new Calculator(i, f).add(i.add(),f.add());
+}
+}
+
+
+Correct Answer
+A. 21.0
+7.5
+
+
+B. 21
+7.5
+
+
+C. 5.0
+21.0
+
+
+D. 7.0
+16.0
+
+
+E. No Output
+
+ Correct
+Question: 7
+What is the output of the following code?
+class Student {
+String name = “Virat”;
+int id = 18;
+Address address;
+
+public void details(Address address) {
+    this.address = address;
+    System.out.println(name + " is from "+address.city);
+    this.address.city = "Delhi";
+    this.address.pin = 567009;
+}
+}
+class Address {
+String city;
+int pin;
+}
+public class TestMCQ {
+public static void main(String[] args) {
+Address address = new Address();
+Student s = new Student();
+s.details(address);
+s.details(address);
+
+}
+}
+
+
+
+A. Virat is from null
+Virat is from null
+
+Correct Answer
+B. Virat is from null
+Virat is from Delhi
+
+
+C. Virat is from Delhi
+Virat is from Delhi
+
+
+D. Virat is from Delhi
+Virat is from null
+
+
+E. Compile time error
+
+ Correct
+Question: 8
+What is the output of the following code?
+class A{
+int a;
+int b;
+public A(int a, int b) {
+super();
+this.a = a;
+this.b = b;
+}
+public A(A a) {
+this.a = a.a;
+this.b = a.b;
+a=null;
+}
+@Override
+public String toString() {
+return “A [a=” + a + “, b=” + b + “]”;
+}
+}
+public class TestMCQ {
+public static void main(String[] args) {
+A a1 = new A(5,6);
+A a2 = new A(a1);
+System.out.println(a1);
+System.out.println(a2);
+}
+}
+
+
+Correct Answer
+A. A [a=5, b=6]
+A [a=5, b=6]
+
+
+B. A [a=5, b=6]
+null
+
+
+C. null
+A [a=5, b=6]
+
+
+D. Compile time error
+
+
+E. Runtime error
+
+ Correct
+Question: 9
+What is the output of the following code?
+class Bank {
+private String name = “SBI”;
+private String address = “Ameerpet”;
+BankAccount acc = new BankAccount();
+
+public String getName() {
+    return name;
+}
+public String getAddress() {
+    return address;
+}
+public void deposit(double amount) {
+    acc.balance+=amount;
+}
+}
+class BankAccount {
+private String accHolderName = “Virat”;
+private double balance = 10000;
+public String getAccHolderName() {
+return accHolderName;
+}
+public double getBalance() {
+return balance;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+Bank b = new Bank();
+b.deposit(1000);
+System.out.println(“Balance is : ” +b.acc.getBalance());
+}
+}
+
+
+
+A. Balance is : 0
+
+
+B. Balance is : 10000
+
+
+C. Balance is :11000
+
+Correct Answer
+D. Compile time error
+
+ Correct
+Question: 10
+What is the output of the following code?
+class A {
+private int a = 10;
+private int b = 20;
+
+public int add() {
+    return a+b;
+}
+private int getA() {
+    return a;
+}
+
+private int getB() {
+    return b;
+}
+}
+
+public class TestMCQ {
+public static void main(String[] args) {
+A a = new A();
+int x = a.getA()+a.getB();
+int y = a.add();
+if(x==y)System.out.println(“Values are Same”);
+else System.out.println(“Values are not same”);
+
+}
+}
+
+
+
+A. Values are Same
+
+
+B. Values are not same
+
+
+C. Values are not same
+Values are not same\
+
+Correct Answer
+D. Compile time error
+
+ Correct
+Question: 11
+What is the correct syntax to call a method named “myMethod” from an object “myObject” ?
+
+
+Correct Answer
+A. myObject.myMethod();
+
+
+B. myMethod.myObject();
+
+
+c. myMethod();
+
+
+D. myObject().myMethod();
+
+
+
+
+
+
+
+
+
